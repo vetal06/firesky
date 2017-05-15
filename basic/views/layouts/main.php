@@ -232,218 +232,7 @@ AppAsset::register($this);
   </symbol>
 </svg>
 <!-- Mobile slide frame -->
-<div class="page__mobile" data-page-pushy-mobile>
-  <nav class="mobile-nav" data-mobile-nav>
-    <ul class="mobile-nav__list" data-mobile-nav-list>
-      <li class="mobile-nav__item" data-mobile-nav-item>
-        <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/shop/category/elektronika"
-           data-mobile-nav-link>
-          Электроника <span class="mobile-nav__has-children"><i class="mobile-nav__ico"><svg class="svg-icon"><use
-                    xlink:href="#svg-icon__arrow-right"></use></svg></i></span> </a>
-        <ul class="mobile-nav__list mobile-nav__list--drop hidden" data-mobile-nav-list>
-          <li class="mobile-nav__item" data-mobile-nav-item>
-            <button class="mobile-nav__link mobile-nav__link--go-back" data-mobile-nav-go-back>
-              Назад <span class="mobile-nav__has-children"><i class="mobile-nav__ico"><svg
-                      class="svg-icon"><use
-                        xlink:href="#svg-icon__arrow-right"></use></svg></i></span>
-            </button>
-          </li>
-          <li class="mobile-nav__item" data-mobile-nav-item>
-            <a class="mobile-nav__link mobile-nav__link--view-all"
-               href="http://unishopvertical.imagecmsdemo.net/shop/category/elektronika">
-              Смотреть все </a>
-          </li>
-          <li class="mobile-nav__item" data-mobile-nav-item>
-            <a class="mobile-nav__link"
-               href="http://unishopvertical.imagecmsdemo.net/shop/category/elektronika/kompiutery"
-               data-mobile-nav-link>
-              Компьютеры <span class="mobile-nav__has-children"><i class="mobile-nav__ico"><svg
-                      class="svg-icon"><use
-                        xlink:href="#svg-icon__arrow-right"></use></svg></i></span> </a>
-            <ul class="mobile-nav__list mobile-nav__list--drop hidden" data-mobile-nav-list>
-              <li class="mobile-nav__item" data-mobile-nav-item>
-                <button class="mobile-nav__link mobile-nav__link--go-back" data-mobile-nav-go-back>
-                  Назад <span class="mobile-nav__has-children"><i class="mobile-nav__ico"><svg
-                          class="svg-icon"><use
-                            xlink:href="#svg-icon__arrow-right"></use></svg></i></span>
-                </button>
-              </li>
-              <li class="mobile-nav__item" data-mobile-nav-item>
-                <a class="mobile-nav__link mobile-nav__link--view-all"
-                   href="http://unishopvertical.imagecmsdemo.net/shop/category/elektronika/kompiutery">
-                  Смотреть все </a>
-              </li>
-              <li class="mobile-nav__item" data-mobile-nav-item>
-                <a class="mobile-nav__link"
-                   href="http://unishopvertical.imagecmsdemo.net/shop/category/elektronika/kompiutery/noutbuki">
-                  Ноутбуки </a>
-              </li>
-              <li class="mobile-nav__item" data-mobile-nav-item>
-                <a class="mobile-nav__link"
-                   href="http://unishopvertical.imagecmsdemo.net/shop/category/elektronika/kompiutery/planshetnye-kompiutery">
-                  Планшетные компьютеры </a>
-              </li>
-              <li class="mobile-nav__item" data-mobile-nav-item>
-                <a class="mobile-nav__link"
-                   href="http://unishopvertical.imagecmsdemo.net/shop/category/elektronika/kompiutery/pk-monobloki">
-                  ПК моноблоки </a>
-              </li>
-            </ul>
-          </li>
-          <li class="mobile-nav__item" data-mobile-nav-item>
-            <a class="mobile-nav__link"
-               href="http://unishopvertical.imagecmsdemo.net/shop/category/elektronika/hranenie-dannyh">
-              Хранение данных </a>
-          </li>
-          <li class="mobile-nav__item" data-mobile-nav-item>
-            <a class="mobile-nav__link"
-               href="http://unishopvertical.imagecmsdemo.net/shop/category/elektronika/noutbuki2">
-              Ноутбуки </a>
-          </li>
-          <li class="mobile-nav__item" data-mobile-nav-item>
-            <a class="mobile-nav__link"
-               href="http://unishopvertical.imagecmsdemo.net/shop/category/elektronika/planshety">
-              Планшеты </a>
-          </li>
-          <li class="mobile-nav__item" data-mobile-nav-item>
-            <a class="mobile-nav__link"
-               href="http://unishopvertical.imagecmsdemo.net/shop/category/elektronika/audio">
-              Аудио </a>
-          </li>
-        </ul>
-      </li>
-      <li class="mobile-nav__item" data-mobile-nav-item>
-        <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/shop/category/mebel">
-          Мебель </a>
-      </li>
-      <li class="mobile-nav__item" data-mobile-nav-item>
-        <a class="mobile-nav__link"
-           href="http://unishopvertical.imagecmsdemo.net/shop/category/sportivnye-tovary">
-          Спортивные товары </a>
-      </li>
-      <li class="mobile-nav__item" data-mobile-nav-item>
-        <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/shop/category/dom-i-sad">
-          Дом и сад </a>
-      </li>
-      <li class="mobile-nav__item" data-mobile-nav-item>
-        <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/shop/category/detskie-tovary">
-          Детские товары </a>
-      </li>
-      <li class="mobile-nav__item" data-mobile-nav-item>
-        <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/shop/category/odezhda">
-          Одежда </a>
-      </li>
-      <li class="mobile-nav__item" data-mobile-nav-item>
-        <a class="mobile-nav__link"
-           href="http://unishopvertical.imagecmsdemo.net/shop/category/telefonija-mr3-pleery-gps">
-          Телефония, МР3-плееры, GPS </a>
-      </li>
-      <li class="mobile-nav__item mobile-nav__item--separator">Магазин</li>
-
-      <li class="mobile-nav__item" data-mobile-nav-item>
-        <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/o-kompanii"
-           data-mobile-nav-link target="_self">
-          О компании <span class="mobile-nav__has-children"><i class="mobile-nav__ico"><svg class="svg-icon"><use
-                    xlink:href="#svg-icon__arrow-right"></use></svg></i></span> </a>
-        <ul class="mobile-nav__list mobile-nav__list--drop hidden" data-mobile-nav-list>
-          <li class="mobile-nav__item" data-mobile-nav-item>
-            <button class="mobile-nav__link mobile-nav__link--go-back" data-mobile-nav-go-back>
-              Назад <span class="mobile-nav__has-children"><i class="mobile-nav__ico"><svg
-                      class="svg-icon"><use
-                        xlink:href="#svg-icon__arrow-right"></use></svg></i></span>
-            </button>
-          </li>
-          <li class="mobile-nav__item" data-mobile-nav-item>
-            <a class="mobile-nav__link mobile-nav__link--view-all"
-               href="http://unishopvertical.imagecmsdemo.net">
-              Смотреть все </a>
-          </li>
-          <li class="mobile-nav__item" data-mobile-nav-item>
-            <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/blog"
-               data-mobile-nav-link target="_self">
-              Блог <span class="mobile-nav__has-children"><i class="mobile-nav__ico"><svg
-                      class="svg-icon"><use
-                        xlink:href="#svg-icon__arrow-right"></use></svg></i></span> </a>
-            <ul class="mobile-nav__list mobile-nav__list--drop hidden" data-mobile-nav-list>
-              <li class="mobile-nav__item" data-mobile-nav-item>
-                <button class="mobile-nav__link mobile-nav__link--go-back" data-mobile-nav-go-back>
-                  Назад <span class="mobile-nav__has-children"><i class="mobile-nav__ico"><svg
-                          class="svg-icon"><use
-                            xlink:href="#svg-icon__arrow-right"></use></svg></i></span>
-                </button>
-              </li>
-              <li class="mobile-nav__item" data-mobile-nav-item>
-                <a class="mobile-nav__link mobile-nav__link--view-all"
-                   href="http://unishopvertical.imagecmsdemo.net/blog">
-                  Смотреть все </a>
-              </li>
-              <li class="mobile-nav__item" data-mobile-nav-item>
-                <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/blog/biznes"
-                   target="_self">
-                  Бизнес </a>
-              </li>
-              <li class="mobile-nav__item" data-mobile-nav-item>
-                <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/blog/finansy"
-                   target="_self">
-                  Финансы </a>
-              </li>
-              <li class="mobile-nav__item" data-mobile-nav-item>
-                <a class="mobile-nav__link"
-                   href="http://unishopvertical.imagecmsdemo.net/blog/ekonomika" target="_self">
-                  Экономика </a>
-              </li>
-            </ul>
-          </li>
-          <li class="mobile-nav__item" data-mobile-nav-item>
-            <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/dostavka-i-oplata"
-               target="_self">
-              Доставка и оплата </a>
-          </li>
-          <li class="mobile-nav__item" data-mobile-nav-item>
-            <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/klienty-o-nas"
-               target="_self">
-              Клиенты о нас </a>
-          </li>
-        </ul>
-      </li>
-      <li class="mobile-nav__item" data-mobile-nav-item>
-        <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/gallery" target="_self">
-          Галерея </a>
-      </li>
-      <li class="mobile-nav__item" data-mobile-nav-item>
-        <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/shop/brand" target="_self">Доставка
-          и оплата </a>
-      </li>
-      <li class="mobile-nav__item" data-mobile-nav-item>
-        <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/kontakty" target="_self">
-          Контакты </a>
-      </li>
-      <li class="mobile-nav__item mobile-nav__item--separator">Пользователь</li>
-      <li class="mobile-nav__item" data-mobile-nav-item>
-        <a class="mobile-nav__link" href="/user/login">Вход</a>
-      </li>
-      <li class="mobile-nav__item" data-mobile-nav-item>
-        <?= empty(Yii::$app->user->id) ? Html::a('Регистрация', '/user/register', ['class' => 'mobile-nav__link', 'rel' => "nofollow"]) : '' ?>
-      </li>
-
-      <li class="mobile-nav__item">
-        <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/shop/cart">Корзина</a>
-      </li>
-
-
-      <li class="mobile-nav__item mobile-nav__item--separator">Языки</li>
-      <li class="mobile-nav__item">
-        <a class="mobile-nav__link" href="/ru">Русский</a>
-      </li>
-      <li class="mobile-nav__item">
-        <a class="mobile-nav__link" href="/en">English</a>
-      </li>
-      <li class="mobile-nav__item">
-        <a class="mobile-nav__link" href="/ua">Українська</a>
-      </li>
-    </ul>
-  </nav>
-</div>
+<?=\app\widgets\menu\LeftMenu::widget(['view' => 'mobile-menu'])?>
 
 <!-- Site background overlay when mobile menu is open -->
 <div class="page__overlay hidden" data-page-pushy-overlay></div>
@@ -638,7 +427,7 @@ AppAsset::register($this);
             </div>
             <!-- Logo -->
             <div class="col-xs-6 col-md-3 col-lg-2 col--align-center col--align-left-md">
-              <img src="/uploads/images/logo.png" alt="unishopvertical">
+              <a href="/"><img src="/uploads/images/logo.png" alt="unishopvertical"></a>
             </div>
             <!-- Phones and call-back -->
             <div class="col-md-3 col-lg-2 col-md-push-5 col-lg-push-4 hidden-xs hidden-sm">
@@ -979,7 +768,7 @@ AppAsset::register($this);
 
         <div class="col-md-2">
           <!-- Main Navigation -->
-          <?=app\widgets\menu\LeftMenu::widget()?>
+          <?=app\widgets\menu\LeftMenu::widget(['view' => 'left-menu'])?>
 
         </div>
 
