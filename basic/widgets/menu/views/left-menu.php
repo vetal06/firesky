@@ -9,7 +9,7 @@
         $span = \yii\helpers\Html::tag('span', Yii::t('app',$category['name']), [
             'class' => 'table-nav__link-helper',
         ]);
-        $a = \yii\helpers\Html::a("$span {$childrenRow}", '#', [
+        $a = \yii\helpers\Html::a("$span {$childrenRow}", "/cat-{$category['alias']}", [
             'class' => $isChildren?'tree-nav__link':'table-nav__link'
         ]);
         $childrenContent = (empty($children))?'':\yii\helpers\Html::tag('nav', "<ul class=\"tree-nav\"> {$children} </ul>", [

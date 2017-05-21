@@ -7,7 +7,7 @@
                 'class' => 'mobile-nav__has-children',
             ]);
 
-        $a = \yii\helpers\Html::a(Yii::t('app',$category['name'])."{$childrenRow}", '#', [
+        $a = \yii\helpers\Html::a(Yii::t('app',$category['name'])."{$childrenRow}", "/cat-{$category['alias']}", [
             'class' => $isChildren?'mobile-nav__link':'mobile-nav__link',
             'data-mobile-nav-link' => !empty($children),
         ]);
@@ -20,7 +20,7 @@
                 'data-mobile-nav-item' => true,
         ]);
 
-        $allLiLink = \yii\helpers\Html::tag('li',\yii\helpers\Html::a('Смотреть все', '#', ['class' => 'mobile-nav__link mobile-nav__link--view-all']), [
+        $allLiLink = \yii\helpers\Html::tag('li',\yii\helpers\Html::a('Смотреть все', "/cat-{$category['alias']}", ['class' => 'mobile-nav__link mobile-nav__link--view-all']), [
             'class' => 'mobile-nav__item',
             'data-mobile-nav-item' => true,
         ] );
