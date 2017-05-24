@@ -8,7 +8,7 @@
                 <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
             </div>
             <div class="pull-left info">
-                <p>Alexander Pierce</p>
+                <p><?=Yii::$app->user->getIdentity()->email?></p>
 
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
@@ -20,6 +20,7 @@
                 'items' => [
                     ['label' => 'Управление разделами сайта', 'options' => ['class' => 'header']],
                     ['label' => 'Управление категориями', 'icon' => 'file-code-o', 'url' => ['/admin/category']],
+                    ['label' => 'Управление товарами', 'icon' => 'file-code-o', 'url' => ['/admin/product']],
                     ['label' => 'Характеристики', 'icon' => 'file-code-o', 'url' => ['/admin/characteristics']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
 

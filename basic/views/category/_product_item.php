@@ -10,7 +10,7 @@
           <button class="product-photo__item" type="button"
                   data-product-photo-href="http://unishopvertical.imagecmsdemo.net/shop/product/detskaia-krovatka-sonia-ld">
             <img class="product-photo__img"
-                 src="/uploads/shop/products/medium/2abc3303a1e16da5395390df0f056f7f.jpg"
+                 src="<?=$model->getMainImageUrl()?>"
                  alt="Детская кроватка Соня ЛД из экологически чистых материалов"
                  title="Детская кроватка Соня ЛД из экологически чистых материалов" data-product-photo="">
             <!-- Photo labels -->

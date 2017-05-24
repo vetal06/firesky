@@ -9,7 +9,7 @@ class AdminAssets extends \yii\web\AssetBundle
 {
 
   public $css = [
-
+    'css/admin.css',
   ];
   public $js = [
   ];
