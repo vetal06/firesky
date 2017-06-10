@@ -2,5 +2,7 @@
 
 return [
     'adminEmail' => 'admin@example.com',
-    'productImagesPath' => '/uploads/products/'
+    'productImagesPath' => '/uploads/products/',
+    'emptyImage' => '/uploads/images/empty.png',
+    'currency' => '₴',
 ];

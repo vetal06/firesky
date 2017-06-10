@@ -83,7 +83,7 @@ class Product extends \yii\db\ActiveRecord
 
   /**
    * Массив картинок
-   * @return array|mixed|null|string
+   * @return array
    */
     public function getImagesArray()
     {
@@ -93,7 +93,7 @@ class Product extends \yii\db\ActiveRecord
         $this->images = Json::decode($this->images);
         return $this->images;
       }
-      return null;
+      return [];
     }
 
   /**
@@ -103,11 +103,12 @@ class Product extends \yii\db\ActiveRecord
     {
       $images = $this->getImagesArray();
       if (empty($images)){
-        return null;
+          $url = Yii::$app->params['emptyImage'];
+      } else {
+          $imageName = array_shift($images);
+          $url = Yii::$app->params['productImagesPath'].$imageName;
       }
-
-      $imageName = array_shift($images);
-      return Yii::$app->params['productImagesPath'].$imageName;
+      return $url;
     }
 
   /**
@@ -120,5 +121,36 @@ class Product extends \yii\db\ActiveRecord
         $value = Yii::$app->params['productImagesPath'].$value;
       }
       return $data;
+    }
+
+    /**
+     * урл карточки объeкта
+     */
+    public function getUrl()
+    {
+        return '/prod-'.$this->alias.'-'.$this->id;
+    }
+
+    /**
+     * Список характеристик
+     */
+    public function getCharacteristicsList()
+    {
+        $characteristicsValues = Json::decode($this->characteristics);
+        if (empty($characteristicsValues)) {
+            return [];
+        }
+        $ids = array_keys($characteristicsValues);
+        $data = Characteristics::find()->where(['in', 'key', $ids])->all();
+        $resData = [];
+        foreach ($data as $row) {
+            $resData[] = [
+                'key' => $row->key,
+                'name' => $row->name,
+                'icon' => $row->icon,
+                'value' => isset($characteristicsValues[$row->key])?$characteristicsValues[$row->key]:'',
+            ];
+        }
+        return $resData;
     }
 }

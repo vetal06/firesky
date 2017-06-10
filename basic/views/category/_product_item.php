@@ -8,35 +8,20 @@
       <div class="product-cut__photo">
         <div class="product-photo">
           <button class="product-photo__item" type="button"
-                  data-product-photo-href="http://unishopvertical.imagecmsdemo.net/shop/product/detskaia-krovatka-sonia-ld">
+                  data-product-photo-href="<?=$model->getUrl()?>">
             <img class="product-photo__img"
                  src="<?=$model->getMainImageUrl()?>"
                  alt="Детская кроватка Соня ЛД из экологически чистых материалов"
                  title="Детская кроватка Соня ЛД из экологически чистых материалов" data-product-photo="">
             <!-- Photo labels -->
-            <span class="product-photo__labels">
-              <?php if ($model->is_top):?>
-                <i class="product-photo__label product-photo__label--hit">
-                  <svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon__hit"></use></svg>
-                  <span class="product-photo__label-text">Хит</span>
-                </i>
-              <?php endif;?>
-
-              <?php if ($model->old_price > 0):?>
-                <i class="product-photo__label product-photo__label--discount">
-                  <span class="product-photo__label-text">-<?=round((($model->old_price-$model->price)/$model->old_price)*100)?>%</span>
-                  <svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-icon__new"></use></svg>
-                </i>
-              <?php endif;?>
-
-            </span>
+            <?=$this->render('_photo_labels',compact('model'))?>
           </button>
         </div>
       </div>
 
       <!-- Title BEGIN -->
       <div class="product-cut__title">
-        <?= \yii\helpers\Html::a(Yii::t('app', $model->name), '#', ['class' => 'product-cut__title-link']) ?>
+        <?= \yii\helpers\Html::a(Yii::t('app', $model->name), $model->getUrl(), ['class' => 'product-cut__title-link']) ?>
       </div>
 
       <!-- If product is not archived -->
@@ -48,7 +33,7 @@
           <!-- Discount -->
           <div class="product-price__item">
             <div class="product-price__old">
-              <span class="product-price__item-cur">$</span>
+              <span class="product-price__item-cur"><?=Yii::$app->params['currency']?></span>
               <span class="product-price__item-value" ata-product-price--origin="data-product-price--origin">
                 <?=$model->old_price?>
               </span>
@@ -60,7 +45,7 @@
           <!-- Main Price -->
           <div class="product-price__item">
             <div class="product-price__main">
-              <span class="product-price__item-cur">$</span>
+              <span class="product-price__item-cur"><?=Yii::$app->params['currency']?></span>
               <span class="product-price__item-value" data-product-price--main="data-product-price--main">
                 <?=$model->price?>
               </span>

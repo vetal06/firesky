@@ -51,6 +51,7 @@ $config = [
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 'cat-<alias:\w+>' => 'category/index',
+                'prod-<alias:\w+>-<id:\d+>' => 'product/index',
             ],
         ],
         'view' => [

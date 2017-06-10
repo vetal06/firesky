@@ -958,7 +958,7 @@ AppAsset::register($this);
     <div class="page__container">
       <div class="basement">
         <div class="row row--ib row--ib-mid">
-          <div class="col-xs-12 col-sm-6 col--align-left-sm col--spacer-xs">© 2015-2016, Интернет-магазин. Все
+          <div class="col-xs-12 col-sm-6 col--align-left-sm col--spacer-xs">© 2017, Интернет-магазин. Все
             права защищены.
           </div>
 
