@@ -39,7 +39,7 @@
       <li class="mobile-nav__item mobile-nav__item--separator">Магазин</li>
 
       <li class="mobile-nav__item" data-mobile-nav-item>
-        <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/o-kompanii"
+        <a class="mobile-nav__link" href="/page-aboutcompany-4"
            data-mobile-nav-link target="_self">
           О компании <span class="mobile-nav__has-children"><i class="mobile-nav__ico"><svg class="svg-icon"><use
                     xlink:href="#svg-icon__arrow-right"></use></svg></i></span> </a>
@@ -57,9 +57,9 @@
               Смотреть все </a>
           </li>
           <li class="mobile-nav__item" data-mobile-nav-item>
-            <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/blog"
+            <a class="mobile-nav__link" href="#"
                data-mobile-nav-link target="_self">
-              Блог <span class="mobile-nav__has-children"><i class="mobile-nav__ico"><svg
+              Новости <span class="mobile-nav__has-children"><i class="mobile-nav__ico"><svg
                       class="svg-icon"><use
                         xlink:href="#svg-icon__arrow-right"></use></svg></i></span> </a>
             <ul class="mobile-nav__list mobile-nav__list--drop hidden" data-mobile-nav-list>
@@ -93,12 +93,12 @@
             </ul>
           </li>
           <li class="mobile-nav__item" data-mobile-nav-item>
-            <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/dostavka-i-oplata"
+            <a class="mobile-nav__link" href="/page-shippingandpayment-3"
                target="_self">
               Доставка и оплата </a>
           </li>
           <li class="mobile-nav__item" data-mobile-nav-item>
-            <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/klienty-o-nas"
+            <a class="mobile-nav__link" href="#"
                target="_self">
               Клиенты о нас </a>
           </li>
@@ -109,11 +109,11 @@
           Галерея </a>
       </li>
       <li class="mobile-nav__item" data-mobile-nav-item>
-        <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/shop/brand" target="_self">Доставка
+        <a class="mobile-nav__link" href="/page-shippingandpayment-3" target="_self">Доставка
           и оплата </a>
       </li>
       <li class="mobile-nav__item" data-mobile-nav-item>
-        <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/kontakty" target="_self">
+        <a class="mobile-nav__link" href="/page-contacts-2" target="_self">
           Контакты </a>
       </li>
       <li class="mobile-nav__item mobile-nav__item--separator">Пользователь</li>

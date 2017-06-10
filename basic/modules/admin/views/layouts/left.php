@@ -21,6 +21,7 @@
                     ['label' => 'Управление разделами сайта', 'options' => ['class' => 'header']],
                     ['label' => 'Управление категориями', 'icon' => 'file-code-o', 'url' => ['/admin/category']],
                     ['label' => 'Управление товарами', 'icon' => 'file-code-o', 'url' => ['/admin/product']],
+                    ['label' => 'Управление страницами', 'icon' => 'file-code-o', 'url' => ['/page/admin/default']],
                     ['label' => 'Характеристики', 'icon' => 'file-code-o', 'url' => ['/admin/characteristics']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
 

@@ -255,7 +255,7 @@ AppAsset::register($this);
 
                     <li class="list-nav__item" data-global-doubletap>
                       <a class="list-nav__link"
-                         href="http://unishopvertical.imagecmsdemo.net/o-kompanii" target="_self">О
+                         href="/page-aboutcompany-4" target="_self">О
                         компании <i class="list-nav__arrow list-nav__arrow--down">
                           <svg class="svg-icon">
                             <use xlink:href="#svg-icon__arrow-down"></use>
@@ -266,8 +266,8 @@ AppAsset::register($this);
                         <ul class="overlay">
                           <li class="overlay__item" data-global-doubletap>
                             <a class="overlay__link"
-                               href="http://unishopvertical.imagecmsdemo.net/blog"
-                               target="_self">Блог <i
+                               href="#"
+                               target="_self">Новости <i
                                   class="overlay__arrow overlay__arrow--right">
                                 <svg class="svg-icon">
                                   <use xlink:href="#svg-icon__arrow-right"></use>
@@ -296,7 +296,7 @@ AppAsset::register($this);
                           </li>
                           <li class="overlay__item">
                             <a class="overlay__link"
-                               href="http://unishopvertical.imagecmsdemo.net/klienty-o-nas"
+                               href="#"
                                target="_self">Клиенты о нас </a>
                           </li>
                         </ul>
@@ -304,16 +304,12 @@ AppAsset::register($this);
                     </li>
                     <li class="list-nav__item">
                       <a class="list-nav__link"
-                         href="http://unishopvertical.imagecmsdemo.net/gallery" target="_self">Галерея </a>
-                    </li>
-                    <li class="list-nav__item">
-                      <a class="list-nav__link"
-                         href="http://unishopvertical.imagecmsdemo.net/shop/brand" target="_self">Доставка
+                         href="/page-shippingandpayment-3" target="_self">Доставка
                         и оплата</a>
                     </li>
                     <li class="list-nav__item">
                       <a class="list-nav__link"
-                         href="http://unishopvertical.imagecmsdemo.net/kontakty" target="_self">Контакты </a>
+                         href="/page-contacts-2" target="_self">Контакты </a>
                     </li>
                   </ul>
                 </nav>
@@ -818,40 +814,6 @@ AppAsset::register($this);
           <div class="col-xs-6 col-sm-3">
             <div class="footer__title">Каталог</div>
             <div class="footer__inner">
-              <ul class="footer__items">
-                <li class="footer__item">
-                  <a class="footer__link"
-                     href="http://unishopvertical.imagecmsdemo.net/shop/category/elektronika">Электроника</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link"
-                     href="http://unishopvertical.imagecmsdemo.net/shop/category/mebel">Мебель</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link"
-                     href="http://unishopvertical.imagecmsdemo.net/shop/category/sportivnye-tovary">Спортивные
-                    товары</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link"
-                     href="http://unishopvertical.imagecmsdemo.net/shop/category/dom-i-sad">Дом и
-                    сад</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link"
-                     href="http://unishopvertical.imagecmsdemo.net/shop/category/detskie-tovary">Детские
-                    товары</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link"
-                     href="http://unishopvertical.imagecmsdemo.net/shop/category/odezhda">Одежда</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link"
-                     href="http://unishopvertical.imagecmsdemo.net/shop/category/telefonija-mr3-pleery-gps">Телефония,
-                    МР3-плееры, GPS</a>
-                </li>
-              </ul>
             </div>
           </div>
           <div class="col-xs-6 col-sm-3">
@@ -860,32 +822,20 @@ AppAsset::register($this);
               <ul class="footer__items">
 
                 <li class="footer__item">
-                  <a class="footer__link" href="http://unishopvertical.imagecmsdemo.net/o-kompanii"
+                  <a class="footer__link" href="/page-aboutcompany-4"
                      target="_self">О компании</a>
                 </li>
                 <li class="footer__item">
                   <a class="footer__link"
-                     href="http://unishopvertical.imagecmsdemo.net/dostavka-i-oplata" target="_self">Доставка
+                     href="/page-shippingandpayment-3" target="_self">Доставка
                     и оплата</a>
                 </li>
                 <li class="footer__item">
-                  <a class="footer__link" href="http://unishopvertical.imagecmsdemo.net/klienty-o-nas"
+                  <a class="footer__link" href="#"
                      target="_self">Клиенты о нас</a>
                 </li>
                 <li class="footer__item">
-                  <a class="footer__link" href="http://unishopvertical.imagecmsdemo.net/blog"
-                     target="_self">Блог</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link" href="http://unishopvertical.imagecmsdemo.net/gallery"
-                     target="_self">Галерея</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link" href="http://unishopvertical.imagecmsdemo.net/shop/brand"
-                     target="_self">Бренды</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link" href="http://unishopvertical.imagecmsdemo.net/kontakty"
+                  <a class="footer__link" href="/page-contacts-2"
                      target="_self">Контакты</a>
                 </li>
               </ul>
@@ -904,7 +854,7 @@ AppAsset::register($this);
                 </li>
 
                 <li class="footer__item">
-                  <a class="footer__link" href="http://unishopvertical.imagecmsdemo.net/callbacks"
+                  <a class="footer__link" href="#"
                      data-modal="callbacks_modal"
                      rel="nofollow">Обратный звонок</a>
                 </li>
@@ -915,11 +865,11 @@ AppAsset::register($this);
             <div class="footer__title">Контакты</div>
             <div class="footer__inner">
               <ul class="footer__items">
-                <li class="footer__item">ул. Набережная 22а</li>
+                <li class="footer__item">г. Одесса 7 км.</li>
                 <li class="footer__item">0 800 567-43-21</li>
                 <li class="footer__item">info@fullmarket.com</li>
                 <li class="footer__item">
-                  <a class="footer__link" href="http://unishopvertical.imagecmsdemo.net/feedback"
+                  <a class="footer__link" href="#"
                      data-modal="feedback_modal"
                      rel="nofollow"
                   >Обратная связь</a>

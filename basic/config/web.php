@@ -52,6 +52,7 @@ $config = [
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 'cat-<alias:\w+>' => 'category/index',
                 'prod-<alias:\w+>-<id:\d+>' => 'product/index',
+                'page-<alias:\w+>-<id:\d+>' => 'page/default/index',
             ],
         ],
         'view' => [
@@ -69,6 +70,11 @@ $config = [
         ],
         'admin' => [
             'class' => 'app\modules\admin\Module',
+        ],
+        'page' => [
+            'class' => 'app\modules\page\PageModule',
+            'adminLayout' => '@app/modules/admin/views/layouts/main',
+            'adminRoles' => ['@'],
         ],
         'treemanager' =>  [
             'class' => '\kartik\tree\Module',

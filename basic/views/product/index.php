@@ -72,6 +72,7 @@ $this->title = "test";
                                         </div>
 
                                         <!-- Product add to cart buttons -->
+                                        <?php if ($model->price > 0): ?>
                                         <div class="product-intro__buy">
                                             <div class="product-buy">
                                                 <!-- Items in stock -->
@@ -159,13 +160,14 @@ $this->title = "test";
 
                                             </div>
                                         </div>
+                                        <?php endif; ?>
 
                                     </div>
                                     <!-- Product actions like wishlist and compare -->
                                     <div class="product-intro__actions">
                                         <div class="product-actions">
 
-
+                                            <?php if ($model->price > 0): ?>
                                             <div class="product-actions__item " data-product-available="">
                                                 <div class="product-actions__ico product-actions__ico--available">
                                                     <svg class="svg-icon">
@@ -177,7 +179,7 @@ $this->title = "test";
                                                     Есть в наличии
                                                 </div>
                                             </div>
-
+                                            <?php endif; ?>
                                             <div class="product-actions__item hidden" data-product-unavailable="">
                                                 <div class="product-actions__ico product-actions__ico--unavailable">
                                                     <svg class="svg-icon">
