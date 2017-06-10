@@ -15,7 +15,9 @@ AppAsset::register($this);
   <meta charset="<?= Yii::$app->charset ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?= Html::csrfMetaTags() ?>
-  <title><?= Html::encode($this->title) ?></title>
+    <?=\app\modules\ceo\widgets\CeoWidget::widget([
+        'type' => \app\modules\ceo\widgets\CeoWidget::TYPE_META,
+    ])?>
   <?php $this->head() ?>
 </head>
 <body>
@@ -278,18 +280,8 @@ AppAsset::register($this);
                               <ul class="overlay">
                                 <li class="overlay__item">
                                   <a class="overlay__link"
-                                     href="http://unishopvertical.imagecmsdemo.net/blog/biznes"
-                                     target="_self">Бизнес </a>
-                                </li>
-                                <li class="overlay__item">
-                                  <a class="overlay__link"
-                                     href="http://unishopvertical.imagecmsdemo.net/blog/finansy"
-                                     target="_self">Финансы </a>
-                                </li>
-                                <li class="overlay__item">
-                                  <a class="overlay__link"
-                                     href="http://unishopvertical.imagecmsdemo.net/blog/ekonomika"
-                                     target="_self">Экономика </a>
+                                     href="#"
+                                     target="_self">Как выбрать фейерверк на свадьбу </a>
                                 </li>
                               </ul>
                             </nav>
@@ -323,7 +315,7 @@ AppAsset::register($this);
                   <div class="user-panel__item" data-ajax-inject="wishlist-total">
 
                     <a class="user-panel__link user-panel__link--empty"
-                       href="http://unishopvertical.imagecmsdemo.net/wishlist" rel="nofollow">
+                       href="#" rel="nofollow">
                       <i class="user-panel__ico user-panel__ico--wishlist">
                         <svg class="svg-icon">
                           <use xlink:href="#svg-icon__heart"></use>
@@ -423,7 +415,7 @@ AppAsset::register($this);
             </div>
             <!-- Logo -->
             <div class="col-xs-6 col-md-3 col-lg-2 col--align-center col--align-left-md">
-              <a href="/"><img src="/uploads/images/logo.png" alt="unishopvertical"></a>
+              <a href="/"><img src="/uploads/images/logo.png" alt="firesky.com.ua"></a>
             </div>
             <!-- Phones and call-back -->
             <div class="col-md-3 col-lg-2 col-md-push-5 col-lg-push-4 hidden-xs hidden-sm">
@@ -439,7 +431,7 @@ AppAsset::register($this);
                   <div class="site-info__title">0 800 567-43-21</div>
                   <div class="site-info__desc">
                     <a class="site-info__link"
-                       href="http://unishopvertical.imagecmsdemo.net/callbacks"
+                       href="#"
                        data-modal="callbacks_modal"
                        rel="nofollow"
                     >
@@ -471,7 +463,7 @@ AppAsset::register($this);
                 <div class="cart-header">
                   <div class="cart-header__aside">
                     <a class="cart-header__ico  cart-header__ico--empty "
-                       href="http://unishopvertical.imagecmsdemo.net/shop/cart"
+                       href="#"
                        data-modal="includes/cart/cart_modal">
                       <svg class="svg-icon">
                         <use xlink:href="#svg-icon__cart"></use>
@@ -482,7 +474,7 @@ AppAsset::register($this);
                   <div class="cart-header__inner visible-lg">
                     <div class="cart-header__title">
                       <a class="cart-header__link  cart-header__link--empty "
-                         href="http://unishopvertical.imagecmsdemo.net/shop/cart"
+                         href="#"
                          data-modal="includes/cart/cart_modal">Корзина</a>
                     </div>
                     <div class="cart-header__desc">
@@ -494,20 +486,16 @@ AppAsset::register($this);
             </div>
             <!-- Search -->
             <div class="col-xs-12 col-md-5 col-lg-4 col-md-pull-4 col-lg-pull-6 col--spacer-sm">
-              <div class="autocomplete"
-                   data-autocomplete="header-search"
-                   data-autocomplete-url="http://unishopvertical.imagecmsdemo.net/shop/search/ac"
-              >
+              <div >
 
                 <!-- Autocomplet Input Element BEGIN -->
-                <div class="autocomplete__element">
-                  <form action="http://unishopvertical.imagecmsdemo.net/shop/search" method="GET">
+                <div>
+                  <form action="/search" method="GET">
                     <div class="input-group">
                       <input class="form-control"
                              data-autocomplete-input
                              type="text"
                              name="text"
-                             autocomplete="off"
                              placeholder="Поиск товаров"
                              value=""
                              required
@@ -524,231 +512,6 @@ AppAsset::register($this);
                 </div>
                 <!-- END Autocomplet Input Element -->
 
-
-                <!-- Autocomplet Overlay Frame BEGIN -->
-                <div class="autocomplete__frame hidden" data-autocomplete-frame>
-                  <a class="autocomplete__item hidden" href="#" data-autocomplete-product="0">
-                    <div class="autocomplete__product">
-                      <!-- Photo  -->
-                      <div class="autocomplete__product-photo">
-                        <div class="product-photo">
-              <span class="product-photo__item product-photo__item--xs">
-                <img class="product-photo__img"
-                     src="http://unishopvertical.imagecmsdemo.net/uploads/shop/nophoto/nophoto.jpg"
-                     alt="No photo" data-autocomplete-product-img>
-              </span>
-                        </div>
-                      </div>
-
-                      <div class="autocomplete__product-info">
-                        <!-- Title -->
-                        <div class="autocomplete__product-title"
-                             data-autocomplete-product-name></div>
-                        <!-- Price -->
-                        <div class="autocomplete__product-price">
-                          <div class="product-price product-price--sm">
-                            <div class="product-price__item">
-                              <div class="product-price__old"
-                                   data-autocomplete-product-old-price></div>
-                            </div>
-                            <div class="product-price__item">
-                              <div class="product-price__main"
-                                   data-autocomplete-product-price></div>
-                            </div>
-                            <div class="product-price__item">
-                              <div class="product-price__addition">
-                                <div class="product-price__addition-item"
-                                     data-autocomplete-product-addition-price></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </a>
-                  <a class="autocomplete__item hidden" href="#" data-autocomplete-product="1">
-                    <div class="autocomplete__product">
-                      <!-- Photo  -->
-                      <div class="autocomplete__product-photo">
-                        <div class="product-photo">
-              <span class="product-photo__item product-photo__item--xs">
-                <img class="product-photo__img"
-                     src="http://unishopvertical.imagecmsdemo.net/uploads/shop/nophoto/nophoto.jpg"
-                     alt="No photo" data-autocomplete-product-img>
-              </span>
-                        </div>
-                      </div>
-
-                      <div class="autocomplete__product-info">
-                        <!-- Title -->
-                        <div class="autocomplete__product-title"
-                             data-autocomplete-product-name></div>
-                        <!-- Price -->
-                        <div class="autocomplete__product-price">
-                          <div class="product-price product-price--sm">
-                            <div class="product-price__item">
-                              <div class="product-price__old"
-                                   data-autocomplete-product-old-price></div>
-                            </div>
-                            <div class="product-price__item">
-                              <div class="product-price__main"
-                                   data-autocomplete-product-price></div>
-                            </div>
-                            <div class="product-price__item">
-                              <div class="product-price__addition">
-                                <div class="product-price__addition-item"
-                                     data-autocomplete-product-addition-price></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </a>
-                  <a class="autocomplete__item hidden" href="#" data-autocomplete-product="2">
-                    <div class="autocomplete__product">
-                      <!-- Photo  -->
-                      <div class="autocomplete__product-photo">
-                        <div class="product-photo">
-              <span class="product-photo__item product-photo__item--xs">
-                <img class="product-photo__img"
-                     src="http://unishopvertical.imagecmsdemo.net/uploads/shop/nophoto/nophoto.jpg"
-                     alt="No photo" data-autocomplete-product-img>
-              </span>
-                        </div>
-                      </div>
-
-                      <div class="autocomplete__product-info">
-                        <!-- Title -->
-                        <div class="autocomplete__product-title"
-                             data-autocomplete-product-name></div>
-                        <!-- Price -->
-                        <div class="autocomplete__product-price">
-                          <div class="product-price product-price--sm">
-                            <div class="product-price__item">
-                              <div class="product-price__old"
-                                   data-autocomplete-product-old-price></div>
-                            </div>
-                            <div class="product-price__item">
-                              <div class="product-price__main"
-                                   data-autocomplete-product-price></div>
-                            </div>
-                            <div class="product-price__item">
-                              <div class="product-price__addition">
-                                <div class="product-price__addition-item"
-                                     data-autocomplete-product-addition-price></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </a>
-                  <a class="autocomplete__item hidden" href="#" data-autocomplete-product="3">
-                    <div class="autocomplete__product">
-                      <!-- Photo  -->
-                      <div class="autocomplete__product-photo">
-                        <div class="product-photo">
-              <span class="product-photo__item product-photo__item--xs">
-                <img class="product-photo__img"
-                     src="http://unishopvertical.imagecmsdemo.net/uploads/shop/nophoto/nophoto.jpg"
-                     alt="No photo" data-autocomplete-product-img>
-              </span>
-                        </div>
-                      </div>
-
-                      <div class="autocomplete__product-info">
-                        <!-- Title -->
-                        <div class="autocomplete__product-title"
-                             data-autocomplete-product-name></div>
-                        <!-- Price -->
-                        <div class="autocomplete__product-price">
-                          <div class="product-price product-price--sm">
-                            <div class="product-price__item">
-                              <div class="product-price__old"
-                                   data-autocomplete-product-old-price></div>
-                            </div>
-                            <div class="product-price__item">
-                              <div class="product-price__main"
-                                   data-autocomplete-product-price></div>
-                            </div>
-                            <div class="product-price__item">
-                              <div class="product-price__addition">
-                                <div class="product-price__addition-item"
-                                     data-autocomplete-product-addition-price></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </a>
-                  <a class="autocomplete__item hidden" href="#" data-autocomplete-product="4">
-                    <div class="autocomplete__product">
-                      <!-- Photo  -->
-                      <div class="autocomplete__product-photo">
-                        <div class="product-photo">
-              <span class="product-photo__item product-photo__item--xs">
-                <img class="product-photo__img"
-                     src="http://unishopvertical.imagecmsdemo.net/uploads/shop/nophoto/nophoto.jpg"
-                     alt="No photo" data-autocomplete-product-img>
-              </span>
-                        </div>
-                      </div>
-
-                      <div class="autocomplete__product-info">
-                        <!-- Title -->
-                        <div class="autocomplete__product-title"
-                             data-autocomplete-product-name></div>
-                        <!-- Price -->
-                        <div class="autocomplete__product-price">
-                          <div class="product-price product-price--sm">
-                            <div class="product-price__item">
-                              <div class="product-price__old"
-                                   data-autocomplete-product-old-price></div>
-                            </div>
-                            <div class="product-price__item">
-                              <div class="product-price__main"
-                                   data-autocomplete-product-price></div>
-                            </div>
-                            <div class="product-price__item">
-                              <div class="product-price__addition">
-                                <div class="product-price__addition-item"
-                                     data-autocomplete-product-addition-price></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </a>
-
-                  <!-- Message if no items found after search request -->
-                  <div class="autocomplete__message autocomplete__message--noitems hidden"
-                       data-autocomplete-noitems>
-                    К сожалению, по вашему запросу ничего не найдено. Пожалуйста, убедитесь, что
-                    запрос введен корректно или переформулируйте его.
-                  </div>
-
-                  <!-- Message if no items found after search request -->
-                  <div class="autocomplete__message autocomplete__message--noitems hidden"
-                       data-autocomplete-tooshort>
-                    Пожалуйста, введите более двух символов
-                  </div>
-
-                  <!-- Link to search page if number of results are more than 5 -->
-                  <div class="autocomplete__readmore hidden">
-                    <a href="http://unishopvertical.imagecmsdemo.net/shop/search?text=">Все
-                      результаты поиска</a>
-                  </div>
-
-                </div>
-                <!-- END Autocomplet Overlay Frame -->
 
               </div><!-- /.autocomplete -->      </div>
           </div>
@@ -786,24 +549,11 @@ AppAsset::register($this);
 <footer class="page__fgroup">
   <div class="page__container">
     <div class="page__seo-text">
-      <div class="typo typo--seo"><h1>Интернет-магазин</h1>
-        <p>Интернет-магазин &mdash; сайт, торгующий товарами в интернете. Позволяет пользователям сформировать
-          заказ на покупку, выбрать способ оплаты и доставки заказа в сети Интернет. Выбрав необходимые товары
-          или услуги, пользователь обычно имеет возможность тут же на сайте выбрать метод оплаты и
-          доставки.</p>
-        <p>Своим рождением первые системы и методы электронной коммерции обязаны появлению технологий
-          автоматизации продаж и внедрению автоматизированных систем управления корпоративными ресурсами. В
-          1960 году американские компании American Airlines и IBM приступают к созданию системы автоматизации
-          процедуры резервирования мест на авиарейсы. Таким образом, система SABRE (Semi-Automatic Business
-          Research Environment) делает воздушные перелёты более доступными для рядовых пассажиров, помогая им
-          ориентироваться в тарифах и рейсах, число которых постоянно растет. За счёт автоматизации процесса
-          расчёта тарифов при резервировании мест снижается стоимость услуг. Это являет собой самый первый
-          опыт создания системы электронной коммерции.</p>
-        <p>Наиболее динамично рынок электронной коммерции развивается в течение последних 20 лет, что
-          обусловлено стремительным ростом количества интернет-пользователей, увеличением влияния социальных
-          сетей и других интерактивных онлайн-платформ, динамичным развитием систем электронных платежей и
-          переходом ведущих игроков рынка к новым технологическим платформам для электронной коммерции (от Web
-          1.0 к Web 2.0, далее к Web 3.0).</p></div>
+      <div class="typo typo--seo">
+          <?=\app\modules\ceo\widgets\CeoWidget::widget([
+                  'type' => \app\modules\ceo\widgets\CeoWidget::TYPE_TEXT,
+          ])?>
+      </div>
     </div>
   </div>
 

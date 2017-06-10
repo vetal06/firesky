@@ -76,6 +76,11 @@ $config = [
             'adminLayout' => '@app/modules/admin/views/layouts/main',
             'adminRoles' => ['@'],
         ],
+        'ceo' => [
+            'class' => 'app\modules\ceo\CeoModule',
+            'adminLayout' => '@app/modules/admin/views/layouts/main',
+            'adminRoles' => ['@'],
+        ],
         'treemanager' =>  [
             'class' => '\kartik\tree\Module',
           // other module settings, refer detailed documentation
