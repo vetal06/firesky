@@ -3,7 +3,11 @@
 namespace app\models;
 
 use Yii;
+use yii\data\ActiveDataProvider;
+use yii\db\Expression;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
+use yii\web\NotFoundHttpException;
 
 /**
  * This is the model class for table "product".
@@ -152,5 +156,47 @@ class Product extends \yii\db\ActiveRecord
             ];
         }
         return $resData;
+    }
+
+    public static function findByCategoryAlias($alias)
+    {
+        $category = Category::findOne(['alias' => $alias]);
+        if ($category == null) {
+            return false;
+        }
+        $childrenCategoryes = Category::find()->select('id')->where('lft >= :lft and rgt <= :rgt and active = true', [
+            ':lft' => $category->lft,
+            ':rgt' => $category->rgt,
+        ])->asArray()->all();
+        $catIds = ArrayHelper::getColumn($childrenCategoryes, 'id');
+
+        $productsQuery = Product::find()->where([
+            'fk_category_id' => $catIds,
+            'is_available' => true
+        ]);
+        return new ActiveDataProvider([
+            'query' => $productsQuery,
+            'sort' => [
+                'attributes' => [
+                    'action' => [
+                        'asc' => [ 'old_price' => SORT_ASC, 'is_top' => SORT_DESC],
+                        'desc' => ['old_price' => SORT_DESC, 'is_top' => SORT_ASC],
+                    ],
+                    'price' => [
+                        'asc' => ['price' => SORT_ASC],
+                        'desc' => new Expression('price DESC NULLS LAST'),
+                    ],
+                    'hit' => [
+                        'asc' => ['is_top' => SORT_DESC],
+                        'desc' => ['is_top' => SORT_ASC],
+                    ],
+                    'name' => [
+                        'asc' => ['name' => SORT_ASC],
+                        'desc' => ['name' => SORT_DESC],
+                    ],
+                ],
+
+            ],
+        ]);
     }
 }

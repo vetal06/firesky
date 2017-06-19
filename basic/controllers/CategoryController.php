@@ -17,28 +17,15 @@ class CategoryController extends Controller
 
     public function actionIndex($alias)
     {
-      $category = Category::findOne(['alias' => $alias]);
-      if ($category == null) {
-        throw new NotFoundHttpException(Yii::t('app','Категория не найдена!'));
-      }
-      $childrenCategoryes = Category::find()->select('id')->where('lft >= :lft and rgt <= :rgt and active = true', [
-          ':lft' => $category->lft,
-          ':rgt' => $category->rgt,
-      ])->asArray()->all();
-      $catIds = ArrayHelper::getColumn($childrenCategoryes, 'id');
+        $dataProvider = Product::findByCategoryAlias($alias);
+        if (!$dataProvider) {
+            throw new NotFoundHttpException(Yii::t('app','Категория не найдена!'));
+        }
+        if ($dataProvider->getModels() == null) {
+            throw new NotFoundHttpException(Yii::t('app', 'Товары не найдены!'));
+        }
 
-      $productsQuery = Product::find()->where([
-          'fk_category_id' => $catIds,
-          'is_available' => true
-      ]);
-      $dataProvider = new ActiveDataProvider([
-          'query' => $productsQuery
-      ]);
-      if ($dataProvider->getModels() == null) {
-        throw new NotFoundHttpException(Yii::t('app','Товары не найдены!'));
-      }
-
-      return $this->render('index', compact('category', 'dataProvider'));
+        return $this->render('index', compact('category', 'dataProvider'));
     }
 
 

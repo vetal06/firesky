@@ -55,21 +55,7 @@
           <!-- Order BEGIN -->
           <div class="col-xs-12 col-sm-5">
             <div class="catalog-toolbar__item">
-              <label class="catalog-toolbar__label hidden-xs hidden-sm hidden-md" for="catalog-sort-by">Сортировать
-                по</label>
-              <div class="catalog-toolbar__field">
-                <select class="form-control input-sm" id="catalog-sort-by" form="catalog-form" name="order"
-                        data-catalog-order-select="">
-                  <option value="action" selected="" data-catalog-default="">Акции</option>
-                  <option value="price">От дешевых к дорогим</option>
-                  <option value="price_desc">От дорогих к дешевым</option>
-                  <option value="hit">Популярные</option>
-                  <option value="rating">Рейтинг</option>
-                  <option value="hot">Новинки</option>
-                  <option value="views">По количеству просмотров</option>
-                  <option value="name">По названию (А-Я)</option>
-                </select>
-              </div>
+                <?=\app\widgets\productorder\ProductOrderWidget::widget()?>
             </div>
           </div>
           <!-- END Order -->
