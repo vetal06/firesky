@@ -46,6 +46,7 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'suffix' => '/',
             'rules' => [
                 '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
@@ -84,7 +85,10 @@ $config = [
         'treemanager' =>  [
             'class' => '\kartik\tree\Module',
           // other module settings, refer detailed documentation
-        ]
+        ],
+        'cart' => [
+            'class' => 'app\modules\cart\Module',
+        ],
     ],
     'params' => $params,
 ];

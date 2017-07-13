@@ -7,7 +7,7 @@
                 'class' => 'mobile-nav__has-children',
             ]);
 
-        $a = \yii\helpers\Html::a(Yii::t('app',$category['name'])."{$childrenRow}", "/cat-{$category['alias']}", [
+        $a = \yii\helpers\Html::a(Yii::t('app',$category['name'])."{$childrenRow}", "/cat-{$category['alias']}/", [
             'class' => $isChildren?'mobile-nav__link':'mobile-nav__link',
             'data-mobile-nav-link' => !empty($children),
         ]);
@@ -132,9 +132,6 @@
       <li class="mobile-nav__item mobile-nav__item--separator">Языки</li>
       <li class="mobile-nav__item">
         <a class="mobile-nav__link" href="/ru">Русский</a>
-      </li>
-      <li class="mobile-nav__item">
-        <a class="mobile-nav__link" href="/en">English</a>
       </li>
       <li class="mobile-nav__item">
         <a class="mobile-nav__link" href="/ua">Українська</a>

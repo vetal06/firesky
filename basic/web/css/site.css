@@ -113,3 +113,9 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+#logo-block {
+    text-align: center;
+}
+#logo-block a img {
+    max-height: 100px;
+}

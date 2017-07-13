@@ -132,7 +132,7 @@ class Product extends \yii\db\ActiveRecord
      */
     public function getUrl()
     {
-        return '/prod-'.$this->alias.'-'.$this->id;
+        return '/prod-'.$this->alias.'-'.$this->id.'/';
     }
 
     /**

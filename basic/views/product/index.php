@@ -19,10 +19,9 @@ $this->title = "test";
                                    data-magnific-galley-close-text="Закрыть">
                                     <img class="product-photo__img"
                                          src="<?= $model->getMainImageUrl() ?>"
-                                         alt="Детская кроватка Соня ЛД из экологически чистых материалов"
-                                         title="Детская кроватка Соня ЛД из экологически чистых материалов"
-                                         data-product-photo="" data-zoom-image-small=""
-                                         data-zoom-image="http://unishopvertical.imagecmsdemo.net/uploads/shop/products/large/2abc3303a1e16da5395390df0f056f7f.jpg">
+                                         alt="<?=$model->name?>"
+                                         title="<?=$model->name?>"
+                                        >
                                     <!-- Photo labels -->
                                     <?=$this->render('/category/_photo_labels', compact('model'))?>
                                 </a>
@@ -76,86 +75,13 @@ $this->title = "test";
                                         <div class="product-intro__buy">
                                             <div class="product-buy">
                                                 <!-- Items in stock -->
-                                                <div class="product-buy__available product-buy--product "
-                                                     data-product-available="">
-                                                    <form action="http://unishopvertical.imagecmsdemo.net/shop/cart/addProductByVariantId/18014"
-                                                          method="get" data-product-button--form=""
-                                                          data-product-button--path="http://unishopvertical.imagecmsdemo.net/shop/cart/api/addProductByVariantId"
-                                                          data-product-button--variant="18014"
-                                                          data-product-button--modal-url="http://unishopvertical.imagecmsdemo.net/shop/cart"
-                                                          data-product-button--modal-template="includes/cart/cart_modal">
-
-                                                        <!-- Input product quantity, you wish to buy -->
-                                                        <div class="product-buy__quantity "
-                                                             data-product-button--quantity=""
-                                                             data-product-button-item="">
-
-                                                            <div class="form-input form-input--product-base"
-                                                                 data-form-quantity="">
-                                                                <div class="form-input__group">
-                                                                    <div class="form-input__group-item">
-                                                                        <button class="form-input__group-btn"
-                                                                                type="button"
-                                                                                data-form-quantity-control="minus">-
-                                                                        </button>
-                                                                    </div>
-                                                                    <input class="form-input__control form-input__control--quantity"
-                                                                           type="text" name="quantity"
-                                                                           autocomplete="off" value="1"
-                                                                           data-cart-summary--quantity-field=""
-                                                                           data-form-quantity-field=""
-                                                                           data-form-quantity-step="1">
-                                                                    <div class="form-input__group-item">
-                                                                        <button class="form-input__group-btn"
-                                                                                type="button"
-                                                                                data-form-quantity-control="plus">+
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
+                                                <div class="product-buy__available product-buy--product">
                                                         <!-- Add to cart button -->
-                                                        <div class="product-buy__buttons " data-product-button--add=""
-                                                             data-product-button-item="">
-                                                            <button class="product-buy__btn product-buy__btn--buy"
-                                                                    type="submit" data-product-button--loader="">
-                                                                Купить <i class="button--loader hidden"
-                                                                          data-button-loader="loader">
-                                                                    <svg class="svg-icon">
-                                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                             xlink:href="#svg-icon__refresh"></use>
-                                                                    </svg>
-                                                                </i>
-                                                            </button>
-                                                        </div>
+                                                    <?=\app\modules\cart\widgets\AddButtonWidget::widget([
+                                                            'productId' => $model->id,
+                                                            'template' => 'add-button-with-count',
+                                                        ])?>
 
-                                                        <!-- Already in cart button -->
-                                                        <div class="product-buy__buttons hidden"
-                                                             data-product-button--view="" data-product-button-item="">
-                                                            <a class="product-buy__btn product-buy__btn--in-cart"
-                                                               href="http://unishopvertical.imagecmsdemo.net/shop/cart"
-                                                               data-modal="includes/cart/cart_modal">В корзине</a>
-                                                        </div>
-
-                                                        <input type="hidden" name="redirect" value="cart">
-                                                        <input type="hidden" value="ef6330c8ca9513f9aa2a61069ed1c772"
-                                                               name="cms_token"></form>
-                                                </div>
-
-                                                <!-- No items available -->
-                                                <div class="product-buy__unavailable  hidden"
-                                                     data-product-unavailable="">
-                                                    <div class="product-buy__unavailable-info">
-                                                        Нет в наличии
-                                                    </div>
-                                                    <div class="product-buy__unavailable-notify">
-                                                        <a class="product-buy__unavailable-link"
-                                                           href="http://unishopvertical.imagecmsdemo.net/shop/ajax/getNotifyingRequest"
-                                                           data-product-notify="17258"
-                                                           data-product-notify-variant="18014" rel="nofollow">
-                                                            Сообщить о появлении </a>
-                                                    </div>
                                                 </div>
 
                                             </div>

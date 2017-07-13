@@ -368,13 +368,6 @@ AppAsset::register($this);
                             Русский </a>
                         </li>
                         <li class="overlay__item">
-                          <a class="overlay__link" href="/en">
-                            <i class="overlay__icon">
-                              <i class="ico-flag ico-flag--en"></i>
-                            </i>
-                            English </a>
-                        </li>
-                        <li class="overlay__item">
                           <a class="overlay__link" href="/ua">
                             <i class="overlay__icon">
                               <i class="ico-flag ico-flag--ua"></i>
@@ -414,7 +407,7 @@ AppAsset::register($this);
               </button>
             </div>
             <!-- Logo -->
-            <div class="col-xs-6 col-md-3 col-lg-2 col--align-center col--align-left-md">
+            <div id="logo-block" class="col-xs-6 col-md-3 col-lg-2 col--align-center col--align-left-md">
               <a href="/"><img src="/uploads/images/logo.png" alt="firesky.com.ua"></a>
             </div>
             <!-- Phones and call-back -->
@@ -428,7 +421,7 @@ AppAsset::register($this);
                   </div>
                 </div>
                 <div class="site-info__inner">
-                  <div class="site-info__title">0 800 567-43-21</div>
+                  <div class="site-info__title">063 55-44-186</div>
                   <div class="site-info__desc">
                     <a class="site-info__link"
                        href="#"
@@ -460,28 +453,7 @@ AppAsset::register($this);
             <!-- Cart -->
             <div class="col-xs-3 col-md-1 col-lg-2 col-md-push-5 col-lg-push-4 clearfix">
               <div class="pull-right" data-ajax-inject="cart-header">
-                <div class="cart-header">
-                  <div class="cart-header__aside">
-                    <a class="cart-header__ico  cart-header__ico--empty "
-                       href="#"
-                       data-modal="includes/cart/cart_modal">
-                      <svg class="svg-icon">
-                        <use xlink:href="#svg-icon__cart"></use>
-                      </svg>
-                      <span class="cart-header__badge hidden-lg">0</span>
-                    </a>
-                  </div>
-                  <div class="cart-header__inner visible-lg">
-                    <div class="cart-header__title">
-                      <a class="cart-header__link  cart-header__link--empty "
-                         href="#"
-                         data-modal="includes/cart/cart_modal">Корзина</a>
-                    </div>
-                    <div class="cart-header__desc">
-                      Пуста
-                    </div>
-                  </div>
-                </div>
+                <?=\app\modules\cart\widgets\CatHeadWidget::widget()?>
               </div>
             </div>
             <!-- Search -->
@@ -616,13 +588,10 @@ AppAsset::register($this);
             <div class="footer__inner">
               <ul class="footer__items">
                 <li class="footer__item">г. Одесса 7 км.</li>
-                <li class="footer__item">0 800 567-43-21</li>
-                <li class="footer__item">info@fullmarket.com</li>
+                <li class="footer__item">063 55-44-186</li>
+                <li class="footer__item">firesky@gmail.com</li>
                 <li class="footer__item">
-                  <a class="footer__link" href="#"
-                     data-modal="feedback_modal"
-                     rel="nofollow"
-                  >Обратная связь</a>
+                  <a class="footer__link" href="#" data-modal="feedback_modal" rel="nofollow">Обратная связь</a>
                 </li>
               </ul>
             </div>

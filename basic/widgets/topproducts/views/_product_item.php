@@ -11,8 +11,8 @@
                   data-product-photo-href="<?=$model->getUrl()?>">
             <img class="product-photo__img"
                  src="<?=$model->getMainImageUrl()?>"
-                 alt="Детская кроватка Соня ЛД из экологически чистых материалов"
-                 title="Детская кроватка Соня ЛД из экологически чистых материалов" data-product-photo="">
+                 alt="<?=$model->name?>"
+                 title="<?=$model->name?>">
             <!-- Photo labels -->
             <?=$this->render('_photo_labels',compact('model'))?>
           </button>

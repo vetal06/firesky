@@ -11,8 +11,8 @@
                   data-product-photo-href="<?=$model->getUrl()?>">
             <img class="product-photo__img"
                  src="<?=$model->getMainImageUrl()?>"
-                 alt="Детская кроватка Соня ЛД из экологически чистых материалов"
-                 title="Детская кроватка Соня ЛД из экологически чистых материалов" data-product-photo="">
+                 alt="<?=$model->name?>"
+                 title="<?=$model->name?>" data-product-photo="">
             <!-- Photo labels -->
             <?=$this->render('_photo_labels',compact('model'))?>
           </button>
@@ -77,53 +77,8 @@
             <div class="product-buy">
               <!-- Items in stock -->
               <div class="product-buy__available  " data-product-available="">
-                <form action="http://unishopvertical.imagecmsdemo.net/shop/cart/addProductByVariantId/18014"
-                      method="get" data-product-button--form=""
-                      data-product-button--path="http://unishopvertical.imagecmsdemo.net/shop/cart/api/addProductByVariantId"
-                      data-product-button--variant="18014"
-                      data-product-button--modal-url="http://unishopvertical.imagecmsdemo.net/shop/cart"
-                      data-product-button--modal-template="includes/cart/cart_modal">
-
-                  <!-- Input product quantity, you wish to buy -->
-
-                  <!-- Add to cart button -->
-                  <div class="product-buy__buttons " data-product-button--add="" data-product-button-item="">
-                    <button class="product-buy__btn product-buy__btn--buy" type="submit"
-                            data-product-button--loader="">
-                      Купить <i class="button--loader hidden" data-button-loader="loader">
-                        <svg class="svg-icon">
-                          <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                               xlink:href="#svg-icon__refresh"></use>
-                        </svg>
-                      </i>
-                    </button>
-                  </div>
-
-                  <!-- Already in cart button -->
-                  <div class="product-buy__buttons hidden" data-product-button--view=""
-                       data-product-button-item="">
-                    <a class="product-buy__btn product-buy__btn--in-cart"
-                       href="http://unishopvertical.imagecmsdemo.net/shop/cart"
-                       data-modal="includes/cart/cart_modal">В корзине</a>
-                  </div>
-
-                  <input type="hidden" name="redirect" value="cart">
-                  <input type="hidden" value="cd85ce1c4d0e91c16956e6571049aa4b" name="cms_token"></form>
+                <?=\app\modules\cart\widgets\AddButtonWidget::widget(['productId' => $model->id])?>
               </div>
-
-              <!-- No items available -->
-              <div class="product-buy__unavailable  hidden" data-product-unavailable="">
-                <div class="product-buy__unavailable-info">
-                  Нет в наличии
-                </div>
-                <div class="product-buy__unavailable-notify">
-                  <a class="product-buy__unavailable-link"
-                     href="http://unishopvertical.imagecmsdemo.net/shop/ajax/getNotifyingRequest"
-                     data-product-notify="17258" data-product-notify-variant="18014" rel="nofollow">
-                    Сообщить о появлении </a>
-                </div>
-              </div>
-
             </div>
             <?php endif; ?>
           </div>
