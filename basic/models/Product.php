@@ -7,6 +7,7 @@ use yii\data\ActiveDataProvider;
 use yii\db\Expression;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Json;
+use yii\helpers\Url;
 use yii\web\NotFoundHttpException;
 
 /**
@@ -132,7 +133,8 @@ class Product extends \yii\db\ActiveRecord
      */
     public function getUrl()
     {
-        return '/prod-'.$this->alias.'-'.$this->id.'/';
+        $catUrl = $this->fkCategory->getUrl();
+        return Url::to($catUrl.'prod-'.$this->alias.'-'.$this->id.'/');
     }
 
     /**
