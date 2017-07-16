@@ -55,7 +55,7 @@ class Category extends \kartik\tree\models\Tree
      */
     public function getUrl()
     {
-        return Url::to("/cat-{$this->getFullAlias()}/");
+        return Url::to(["/cat-{$this->getFullAlias()}/", 'lang' => Yii::$app->language]);
     }
 
     /**

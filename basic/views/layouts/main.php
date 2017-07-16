@@ -350,32 +350,7 @@ AppAsset::register($this);
                     </div>
                   </div>
                   <div class="user-panel__item">
-                    <div class="user-panel__link">
-                      <span class="user-panel__ico"><i class="ico-flag ico-flag--ru"></i></span>
-                      <i class="user-panel__arrow user-panel__arrow--down">
-                        <svg class="svg-icon">
-                          <use xlink:href="#svg-icon__arrow-down"></use>
-                        </svg>
-                      </i>
-                    </div>
-                    <div class="user-panel__drop user-panel__drop--rtl">
-                      <ul class="overlay">
-                        <li class="overlay__item">
-                          <a class="overlay__link" href="/ru">
-                            <i class="overlay__icon">
-                              <i class="ico-flag ico-flag--ru"></i>
-                            </i>
-                            Русский </a>
-                        </li>
-                        <li class="overlay__item">
-                          <a class="overlay__link" href="/ua">
-                            <i class="overlay__icon">
-                              <i class="ico-flag ico-flag--ua"></i>
-                            </i>
-                            Українська </a>
-                        </li>
-                      </ul>
-                    </div>
+                    <?=\app\modules\lang\widgets\LangWidget::widget()?>
                   </div>
 
                 </div>
