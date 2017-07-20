@@ -398,12 +398,7 @@ AppAsset::register($this);
                 <div class="site-info__inner">
                   <div class="site-info__title"><?=Yii::$app->params['phone']?></div>
                   <div class="site-info__desc">
-                    <a class="site-info__link"
-                       href="#"
-                       data-modal="callbacks_modal"
-                       rel="nofollow"
-                    >
-                      Обратный звонок </a>
+                      <?=\app\modules\callback\widgets\CallButton::widget()?>
                   </div>
                 </div>
               </div>
@@ -420,7 +415,7 @@ AppAsset::register($this);
                 </div>
                 <div class="site-info__inner">
                   <div class="site-info__desc">
-                    Пн–Сб 09:00–20:00, Вс 09:00–17:00
+                    Пн–Вс 09:00–20:00
                   </div>
                 </div>
               </div>
@@ -549,12 +544,6 @@ AppAsset::register($this);
                 <li class="footer__item">
                   <?= empty(Yii::$app->user->id) ? Html::a('Регистрация', '/user/register', ['class' => 'footer__link', 'rel' => "nofollow"]) : '' ?>
                 </li>
-
-                <li class="footer__item">
-                  <a class="footer__link" href="#"
-                     data-modal="callbacks_modal"
-                     rel="nofollow">Обратный звонок</a>
-                </li>
               </ul>
             </div>
           </div>
@@ -566,7 +555,7 @@ AppAsset::register($this);
                 <li class="footer__item"><?=Yii::$app->params['phone']?></li>
                 <li class="footer__item">firesky@gmail.com</li>
                 <li class="footer__item">
-                  <a class="footer__link" href="#" data-modal="feedback_modal" rel="nofollow">Обратная связь</a>
+                    <?=\app\modules\callback\widgets\CallButton::widget()?>
                 </li>
               </ul>
             </div>

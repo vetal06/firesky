@@ -335,9 +335,7 @@ $this->title = "test";
                                 </div>
                                 <p class="product-shipping__desc">
                                     Звоните: <span class="product-shipping__phone"><?=Yii::$app->params['phone']?></span><br>
-                                    или <a class="site-info__link"
-                                           href="http://unishopvertical.imagecmsdemo.net/callbacks"
-                                           data-modal="callbacks_modal">мы сами Вам перезвоним</a>
+                                    или <?=\app\modules\callback\widgets\CallButton::widget()?>
                                 </p>
                             </div>
 

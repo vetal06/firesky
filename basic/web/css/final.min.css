@@ -2993,7 +2993,7 @@ body {
     background: #f2f6f9
 }
 
-.modal, .user-panel__item:hover {
+.user-panel__item:hover {
     background: #fff
 }
 
@@ -3158,12 +3158,6 @@ body {
     left: auto
 }
 
-.modal {
-    position: relative;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 700px
-}
 
 .modal__header {
     position: relative;

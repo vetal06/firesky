@@ -99,6 +99,9 @@ $config = [
         'cart' => [
             'class' => 'app\modules\cart\Module',
         ],
+        'callback' => [
+            'class' => 'app\modules\callback\CallbackModule',
+        ],
     ],
     'params' => $params,
 ];
