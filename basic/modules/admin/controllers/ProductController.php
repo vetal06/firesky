@@ -3,6 +3,7 @@
 namespace app\modules\admin\controllers;
 
 use app\models\Category;
+use app\models\Characteristics;
 use Yii;
 use app\models\Product;
 use app\modules\admin\models\ProductSearch;
@@ -87,6 +88,7 @@ class ProductController extends Controller
 
         return $this->render('create', [
             'model' => $model,
+            'characteristicList' => $this->getCharacteristics(),
         ]);
 
     }
@@ -106,6 +108,7 @@ class ProductController extends Controller
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'characteristicList' => $this->getCharacteristics(),
             ]);
         }
     }
@@ -149,5 +152,10 @@ class ProductController extends Controller
       } else {
         return false;
       }
+    }
+
+    private function getCharacteristics()
+    {
+        return Characteristics::find()->all();
     }
 }

@@ -27,7 +27,11 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'old_price')->textInput() ?>
   </div>
   <div class="col-md-12">
-    <?= $form->field($model, 'characteristics')->textInput() ?>
+      <label>Характеристики:</label>
+      <?php foreach ($characteristicList as $char):?>
+          <?= $form->field($model, "characteristics[{$char->key}]")->label($char->name)->textInput() ?>
+      <?php endforeach;?>
+
   </div>
   <div class="col-md-12">
     <?php foreach ($model->getAllImagesUrl() as $image):?>
@@ -36,6 +40,9 @@ use yii\widgets\ActiveForm;
   </div>
   <div class="col-md-12">
     <?= $form->field($model, 'fileImage')->fileInput() ?>
+  </div>
+  <div class="col-md-12">
+    <?= $form->field($model, 'youtube_url')->textInput() ?>
   </div>
   <div class="col-md-12">
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>

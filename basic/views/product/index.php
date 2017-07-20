@@ -163,6 +163,17 @@ $this->title = "test";
                             </div>
                         </div>
 
+                        <?php if(!empty($model->youtube_url)):?>
+                        <div class="product-fullinfo__item">
+                            <div class="product-fullinfo__header">
+                                <div class="product-fullinfo__title"><?=Yii::t('app', 'Видео')?></div>
+                            </div>
+                            <div class="product-fullinfo__inner">
+                                <iframe width="640" height="360" src="<?=$model->youtube_url?>" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <?php endif;?>
+
 
                         <!-- Product all properties -->
                         <div class="product-fullinfo__item">
@@ -181,7 +192,7 @@ $this->title = "test";
                                                 </div><!-- /.properties__title -->
                                             </div>
                                         </div>
-                                        <div class="properties__value"><?=$row['value']?></div>
+                                        <div class="properties__value"><?=$row['value']?> <?=$row['unit']?></div>
                                     </div>
                                     <?php endforeach;?>
                                 </div>
@@ -192,7 +203,8 @@ $this->title = "test";
                         <!-- Product commetns -->
                         <div id="comments-list"></div>
 
-                    </div><!-- /.product-fullinfo-->        </div>
+                    </div><!-- /.product-fullinfo-->
+                </div>
 
             </div><!-- /.col -->
 
@@ -322,7 +334,7 @@ $this->title = "test";
                                     <div class="product-shipping__title">Возникли вопросы?</div>
                                 </div>
                                 <p class="product-shipping__desc">
-                                    Звоните: <span class="product-shipping__phone">0 800 567-43-21</span><br>
+                                    Звоните: <span class="product-shipping__phone"><?=Yii::$app->params['phone']?></span><br>
                                     или <a class="site-info__link"
                                            href="http://unishopvertical.imagecmsdemo.net/callbacks"
                                            data-modal="callbacks_modal">мы сами Вам перезвоним</a>

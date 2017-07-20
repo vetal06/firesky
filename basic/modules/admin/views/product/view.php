@@ -34,7 +34,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'created_at',
             'update_at',
             'description:ntext',
-            'characteristics',
             'images',
             'fk_category_id',
             'id',

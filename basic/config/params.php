@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'phone' => '063 55-44-186',
     'adminEmail' => 'firesky.com.ua@gmail.com',
     'productImagesPath' => '/uploads/products/',
     'emptyImage' => '/uploads/images/empty.png',

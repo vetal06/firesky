@@ -58,6 +58,7 @@ class CeoWidget extends \yii\base\Widget
         if (self::$ceoModel == null) {
             $routeName = \Yii::$app->controller->route;
             $routeParams = \Yii::$app->controller->actionParams;
+            $routeParams['lang'] = \Yii::$app->language;
             if (empty($routeParams)) {
                 $paramsEncode = '{}';
             } else {

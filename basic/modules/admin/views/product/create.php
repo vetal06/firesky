@@ -15,6 +15,7 @@ $this->title = 'Добавдение товара';
 
     <?= $this->render('_form', [
         'model' => $model,
+        'characteristicList' => $characteristicList,
     ]) ?>
 
 </div>

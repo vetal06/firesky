@@ -396,7 +396,7 @@ AppAsset::register($this);
                   </div>
                 </div>
                 <div class="site-info__inner">
-                  <div class="site-info__title">063 55-44-186</div>
+                  <div class="site-info__title"><?=Yii::$app->params['phone']?></div>
                   <div class="site-info__desc">
                     <a class="site-info__link"
                        href="#"
@@ -563,7 +563,7 @@ AppAsset::register($this);
             <div class="footer__inner">
               <ul class="footer__items">
                 <li class="footer__item">г. Одесса 7 км.</li>
-                <li class="footer__item">063 55-44-186</li>
+                <li class="footer__item"><?=Yii::$app->params['phone']?></li>
                 <li class="footer__item">firesky@gmail.com</li>
                 <li class="footer__item">
                   <a class="footer__link" href="#" data-modal="feedback_modal" rel="nofollow">Обратная связь</a>
