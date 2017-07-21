@@ -3,6 +3,7 @@ var CallButton = {
     templateUrl:'',
     buttonIdentity: '.call-back-button',
     modalBlockId: 'call-back-modal-block',
+    ajaxUrl: '/callback/api/add-phone/',
     init: function () {
         if (!this.sourceUrl) {
             throw new Error('Set source path!');
@@ -16,6 +17,7 @@ var CallButton = {
         $('body').on('click', _t.buttonIdentity, function () {
             _t.loadModalTemplate(function (modal) {
                 modal.modal('show');
+                _t.setSubmitModalFormEvent(modal.find('form'));
             })
         })
     },
@@ -34,5 +36,20 @@ var CallButton = {
                 }
             }
         });
+    },
+
+    setSubmitModalFormEvent: function (form) {
+        var _t = this;
+        form.on('submit', function () {
+            $.ajax({
+                url: _t.ajaxUrl,
+                method: 'POST',
+                data: form.serialize(),
+                success: function () {
+                    form.closest('.modal').modal('hide');
+                }
+            });
+            return false;
+        })
     }
 };
