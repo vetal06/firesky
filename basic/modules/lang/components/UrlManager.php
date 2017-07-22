@@ -13,6 +13,8 @@ class UrlManager extends \yii\web\UrlManager
         if( isset($params['lang']) && isset(\Yii::$app->params['languages']['list'][$params['lang']])){
             $lang = $params['lang'];
             unset($params['lang']);
+        } else {
+            $lang = \Yii::$app->language;
         }
 
         if ($lang == \Yii::$app->params['languages']['default']) {

@@ -257,8 +257,9 @@ AppAsset::register($this);
 
                     <li class="list-nav__item" data-global-doubletap>
                       <a class="list-nav__link"
-                         href="/page-aboutcompany-4" target="_self">О
-                        компании <i class="list-nav__arrow list-nav__arrow--down">
+                         href="<?=\yii\helpers\Url::to(['/page-aboutcompany-4/'])?>" target="_self">
+                          <?=Yii::t('app', 'О компании')?>
+                      <i class="list-nav__arrow list-nav__arrow--down">
                           <svg class="svg-icon">
                             <use xlink:href="#svg-icon__arrow-down"></use>
                           </svg>
@@ -266,42 +267,32 @@ AppAsset::register($this);
                       </a>
                       <nav class="list-nav__drop">
                         <ul class="overlay">
-                          <li class="overlay__item" data-global-doubletap>
+                          <li class="overlay__item">
                             <a class="overlay__link"
                                href="#"
-                               target="_self">Новости <i
-                                  class="overlay__arrow overlay__arrow--right">
-                                <svg class="svg-icon">
-                                  <use xlink:href="#svg-icon__arrow-right"></use>
-                                </svg>
-                              </i>
+                               target="_self">
+                                <?=Yii::t('app', 'Новости')?>
                             </a>
-                            <nav class="overlay__drop">
-                              <ul class="overlay">
-                                <li class="overlay__item">
-                                  <a class="overlay__link"
-                                     href="#"
-                                     target="_self">Как выбрать фейерверк на свадьбу </a>
-                                </li>
-                              </ul>
-                            </nav>
                           </li>
                           <li class="overlay__item">
                             <a class="overlay__link"
                                href="#"
-                               target="_self">Клиенты о нас </a>
+                               target="_self"><?=Yii::t('app', 'Клиенты о нас')?></a>
                           </li>
                         </ul>
                       </nav>
                     </li>
                     <li class="list-nav__item">
                       <a class="list-nav__link"
-                         href="/page-shippingandpayment-3" target="_self">Доставка
-                        и оплата</a>
+                         href="<?=\yii\helpers\Url::to(['/page-shippingandpayment-3/'])?>" target="_self">
+                          <?=Yii::t('app', 'Доставка и оплата')?>
+                      </a>
                     </li>
                     <li class="list-nav__item">
                       <a class="list-nav__link"
-                         href="/page-contacts-2" target="_self">Контакты </a>
+                         href="<?=\yii\helpers\Url::to(['/page-contacts-2/'])?>" target="_self">
+                          <?=Yii::t('app', 'Контакты')?>
+                      </a>
                     </li>
                   </ul>
                 </nav>
@@ -330,9 +321,10 @@ AppAsset::register($this);
     <i class="user-panel__ico user-panel__ico--profile">
       <svg class="svg-icon"><use xlink:href="#svg-icon__user"></use></svg>
     </i>
-    Личный кабинет    <i class="user-panel__arrow user-panel__arrow--down">
-      <svg class="svg-icon"><use xlink:href="#svg-icon__arrow-down"></use></svg>
-    </i>
+     <?=Yii::t('app', 'Личный кабинет')?>
+      <i class="user-panel__arrow user-panel__arrow--down">
+        <svg class="svg-icon"><use xlink:href="#svg-icon__arrow-down"></use></svg>
+      </i>
   </span>
                     <div class="user-panel__drop user-panel__drop--rtl">
                       <div class="overlay">
@@ -514,21 +506,22 @@ AppAsset::register($this);
               <ul class="footer__items">
 
                 <li class="footer__item">
-                  <a class="footer__link" href="/page-aboutcompany-4"
-                     target="_self">О компании</a>
+                  <a class="footer__link" href="<?=\yii\helpers\Url::to(['/page-aboutcompany-4/'])?>"
+                     target="_self"><?=Yii::t('app', 'О компании')?></a>
                 </li>
                 <li class="footer__item">
                   <a class="footer__link"
-                     href="/page-shippingandpayment-3" target="_self">Доставка
-                    и оплата</a>
+                     href="<?=\yii\helpers\Url::to(['/page-shippingandpayment-3/'])?>" target="_self">
+                      <?=Yii::t('app', 'Доставка и оплата')?>
+                  </a>
                 </li>
                 <li class="footer__item">
                   <a class="footer__link" href="#"
-                     target="_self">Клиенты о нас</a>
+                     target="_self"><?=Yii::t('app', 'Клиенты о нас')?></a>
                 </li>
                 <li class="footer__item">
-                  <a class="footer__link" href="/page-contacts-2"
-                     target="_self">Контакты</a>
+                  <a class="footer__link" href="<?=\yii\helpers\Url::to(['/page-contacts-2/'])?>"
+                     target="_self"><?=Yii::t('app', 'Контакты')?></a>
                 </li>
               </ul>
             </div>
@@ -538,9 +531,6 @@ AppAsset::register($this);
             <div class="footer__title">Пользователь</div>
             <div class="footer__inner">
               <ul class="footer__items">
-                <li class="footer__item">
-                  <a class="footer__link" href="/user/login" rel="nofollow">Вход</a>
-                </li>
                 <li class="footer__item">
                   <?= empty(Yii::$app->user->id) ? Html::a('Регистрация', '/user/register', ['class' => 'footer__link', 'rel' => "nofollow"]) : '' ?>
                 </li>
