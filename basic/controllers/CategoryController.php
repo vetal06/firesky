@@ -19,6 +19,7 @@ class CategoryController extends Controller
     {
         $aliasArray = explode('/', $alias);
         $alias = end($aliasArray);
+        $category = Category::find()->andWhere(['alias' => $alias])->one();
         $dataProvider = Product::findByCategoryAlias($alias);
         if (!$dataProvider) {
             throw new NotFoundHttpException(Yii::t('app','Категория не найдена!'));
