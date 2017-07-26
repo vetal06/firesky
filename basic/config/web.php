@@ -102,6 +102,9 @@ $config = [
         'callback' => [
             'class' => 'app\modules\callback\CallbackModule',
         ],
+        'search' => [
+            'class' => 'app\modules\search\SearchModule',
+        ],
     ],
     'params' => $params,
 ];

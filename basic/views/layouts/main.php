@@ -420,34 +420,9 @@ AppAsset::register($this);
             </div>
             <!-- Search -->
             <div class="col-xs-12 col-md-5 col-lg-4 col-md-pull-4 col-lg-pull-6 col--spacer-sm">
-              <div >
+                <?=\app\modules\search\widgets\Search::widget()?>
 
-                <!-- Autocomplet Input Element BEGIN -->
-                <div>
-                  <form action="/search" method="GET">
-                    <div class="input-group">
-                      <input class="form-control"
-                             data-autocomplete-input
-                             type="text"
-                             name="text"
-                             placeholder="Поиск товаров"
-                             value=""
-                             required
-                      >
-                      <span class="input-group-btn">
-				<button class="btn btn-default" type="submit">
-                  <i class="btn-default__ico btn-default__ico--search">
-                    <svg class="svg-icon"><use xlink:href="#svg-icon__search"></use></svg>
-                  </i>
-                </button>
-			</span>
-                    </div>
-                  </form>
-                </div>
-                <!-- END Autocomplet Input Element -->
-
-
-              </div><!-- /.autocomplete -->      </div>
+            </div>
           </div>
 
         </div>
