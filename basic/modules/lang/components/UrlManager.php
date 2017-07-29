@@ -7,18 +7,20 @@ use yii\helpers\Url;
 class UrlManager extends \yii\web\UrlManager
 {
 
+    private $lang;
+
     public function createUrl($params)
     {
-        $lang = null;
         if( isset($params['lang']) && isset(\Yii::$app->params['languages']['list'][$params['lang']])){
-            $lang = $params['lang'];
+            $this->lang = $params['lang'];
             unset($params['lang']);
         } else {
-            $lang = \Yii::$app->language;
+            $this->lang = \Yii::$app->language;
         }
 
-        if ($lang == \Yii::$app->params['languages']['default']) {
-            $lang = null;
+        $langUrl = $this->lang;
+        if ($langUrl == \Yii::$app->params['languages']['default']) {
+            $langUrl = null;
         }
 
 
@@ -26,15 +28,24 @@ class UrlManager extends \yii\web\UrlManager
         //Получаем сформированный URL(без префикса идентификатора языка)
         $url = parent::createUrl($params);
 
-        if ($lang != null) {
-            $lang = '/'.$lang;
+        if ($langUrl != null) {
+            $langUrl = '/'.$langUrl;
         }
 
 
         if( $url == '/' ){
-            return $lang == null? '/':$lang;
+            return $langUrl == null? '/':$langUrl;
         }else{
-            return $lang.$url;
+            return $langUrl.$url;
         }
+    }
+
+    public function parseRequest($request)
+    {
+        $res = parent::parseRequest($request);
+        if (empty($res[1]['lang'])) {
+            $res[1]['lang'] = $request->currentLang;
+        }
+        return $res;
     }
 }

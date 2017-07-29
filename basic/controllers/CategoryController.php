@@ -7,6 +7,7 @@ use app\models\Product;
 use Yii;
 use yii\data\ActiveDataProvider;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Url;
 use yii\web\Controller;
 use app\models\LoginForm;
 use app\models\ContactForm;
@@ -18,7 +19,7 @@ class CategoryController extends Controller
     public function actionIndex($alias)
     {
         $aliasArray = explode('/', $alias);
-        $alias = end($aliasArray);
+        $alias = end($aliasArray); //выбираем самы последний алиас
         $category = Category::find()->andWhere(['alias' => $alias])->one();
         $dataProvider = Product::findByCategoryAlias($alias);
         if (!$dataProvider) {

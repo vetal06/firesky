@@ -3,6 +3,8 @@
 namespace app\modules\ceo\models;
 
 use Yii;
+use yii\db\Expression;
+use yii\helpers\Json;
 
 /**
  * This is the model class for table "ceo".
@@ -17,6 +19,7 @@ use Yii;
  */
 class Ceo extends \yii\db\ActiveRecord
 {
+    public $url;
     /**
      * @inheritdoc
      */
@@ -36,6 +39,7 @@ class Ceo extends \yii\db\ActiveRecord
             [['route_name', 'name'], 'string', 'max' => 255],
             [['title'], 'string', 'max' => 70],
             [['meta_keywords', 'meta_description'], 'string', 'max' => 110],
+            ['url', 'required']
         ];
     }
 
@@ -52,6 +56,25 @@ class Ceo extends \yii\db\ActiveRecord
             'title' => 'Title',
             'meta_keywords' => 'Meta Keywords',
             'meta_description' => 'Meta Description',
+            'url' => 'Url links'
         ];
+    }
+
+    public static function findByRoute($name, $params)
+    {
+
+        if (is_array($params)) {
+            if (empty($params)) {
+                $paramsEncode = '{}';
+            } else {
+                $paramsEncode = Json::encode($params);
+            }
+        } else {
+            $paramsEncode = $params;
+        }
+
+        $query = Ceo::find()->where(['route_name' => $name])
+            ->andWhere(new Expression("route_parameters @> :params", [":params" => $paramsEncode]));
+        return $query;
     }
 }

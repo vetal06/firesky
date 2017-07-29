@@ -11,7 +11,7 @@
     <ul class="overlay">
         <?php foreach ($languageList as $lang => $prop):?>
             <li class="overlay__item">
-                <a class="overlay__link" href="<?=\yii\helpers\Url::to(['/', 'lang' => $lang])?>">
+                <a class="overlay__link" href="<?=\yii\helpers\Url::current(['lang' => $lang])?>">
                     <i class="overlay__icon">
                         <i class="<?=$prop['icon']?>"></i>
                     </i>

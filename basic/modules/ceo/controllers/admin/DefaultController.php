@@ -2,9 +2,12 @@
 
 namespace app\modules\ceo\controllers\admin;
 
+use app\modules\ceo\components\UrlParser;
 use Yii;
 use app\modules\ceo\models\Ceo;
 use app\modules\ceo\models\CeoSearch;
+use yii\base\Exception;
+use yii\helpers\Json;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -65,14 +68,24 @@ class DefaultController extends Controller
     public function actionCreate()
     {
         $model = new Ceo();
+        if ($model->load(Yii::$app->request->post()) && !empty($model->url)) {
+            if (empty($model->route_name)) {
+                $urlParseData = (new UrlParser($model->url))->parse();
+                $model->route_name = $urlParseData['name'];
+                $model->route_parameters =  empty($urlParseData['params'])?'{}':Json::encode($urlParseData['params']);
+            }
+            if ($ceoDataList = Ceo::findByRoute($model->route_name, $model->route_parameters)->all()) {
+                return $this->render('create_step_1', compact('model', 'ceoDataList'));
+            }
+            if($model->save()) {
+                return $this->redirect(['view', 'route_name' => $model->route_name, 'route_parameters' => $model->route_parameters]);
+            }
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'route_name' => $model->route_name, 'route_parameters' => $model->route_parameters]);
-        } else {
             return $this->render('create', [
                 'model' => $model,
             ]);
         }
+        return $this->render('create_step_1', compact('model'));
     }
 
     /**

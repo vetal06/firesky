@@ -44,7 +44,7 @@ $this->title = 'firesky.com.ua';
 
                                     <!-- Banner image -->
                                     <img class="banner-simple__image"
-                                         src="https://static-eu.insales.ru/files/1/4481/1905025/original/salut_posle_svadebnogo_banketa1.jpg"
+                                         src="/uploads/images/salut_posle_svadebnogo_banketa1.jpg"
                                          alt="Салют на свадьбу">
 
                                 </div>
@@ -59,8 +59,8 @@ $this->title = 'firesky.com.ua';
 
                                     <!-- Banner image -->
                                     <img class="banner-simple__image"
-                                         src="https://static-eu.insales.ru/files/1/4481/1905025/original/salut_posle_svadebnogo_banketa1.jpg"
-                                         alt="Новое поколение компютеров Apple iMac">
+                                         src="/uploads/images/salut_posle_svadebnogo_banketa1.jpg"
+                                         alt="Салют на свадьбу">
 
                                 </div>
                             </div>
@@ -110,8 +110,8 @@ $this->title = 'firesky.com.ua';
 
                                         <!-- Banner image -->
                                         <img class="banner-simple__image"
-                                             src="https://static-eu.insales.ru/files/1/4481/1905025/original/salut_posle_svadebnogo_banketa1.jpg"
-                                             alt="Коллекция плюшевых медведей">
+                                             src="/uploads/images/Dubai.jpg"
+                                             alt="Новогодний салют">
 
                                     </div>
                                 </div>
@@ -158,8 +158,8 @@ $this->title = 'firesky.com.ua';
 
                                         <!-- Banner image -->
                                         <img class="banner-simple__image"
-                                             src="https://static-eu.insales.ru/files/1/4481/1905025/original/salut_posle_svadebnogo_banketa1.jpg"
-                                             alt="Качественные строительные инструменты">
+                                             src="/uploads/images/5f9206d12d6021b3a0cbc6c67717dc45.jpg"
+                                             alt="Фейерверк на день рождения">
 
                                     </div>
                                 </div>

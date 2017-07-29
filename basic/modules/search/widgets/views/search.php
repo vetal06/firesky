@@ -3,9 +3,7 @@
         'method' => 'GET',
 ])?>
     <div class="input-group">
-        <?=$form->field($model, 'query')->label(false)->textInput([
-                'placeholder' => $model->getAttributeLabel('query'),
-        ])?>
+        <?=\yii\helpers\Html::activeTextInput($model, 'query', ['class' => 'form-control', 'placeholder' => $model->getAttributeLabel('query'),])?>
         <span class="input-group-btn">
 				<button class="btn btn-default" type="submit">
                   <i class="btn-default__ico btn-default__ico--search">

@@ -59,13 +59,7 @@ class CeoWidget extends \yii\base\Widget
             $routeName = \Yii::$app->controller->route;
             $routeParams = \Yii::$app->controller->actionParams;
             $routeParams['lang'] = \Yii::$app->language;
-            if (empty($routeParams)) {
-                $paramsEncode = '{}';
-            } else {
-                $paramsEncode = Json::encode($routeParams);
-            }
-            $query = Ceo::find()->where(['route_name' => $routeName])
-                ->andWhere(new Expression("route_parameters @> :params", [":params" => $paramsEncode]));
+            $query = Ceo::findByRoute($routeName, $routeParams);
             self::$ceoModel = $query->one();
         }
         return self::$ceoModel;
