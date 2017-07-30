@@ -7,24 +7,6 @@
     <div class="hidden-xs">
     </div>
 
-    <!-- Filter toggle button on mobile devices -->
-    <div class="content__sidebar-item visible-xs">
-      <button class="btn btn-default btn-block" data-filter-toggle--btn="">
-            <span data-filter-toggle--btn-text="">Показать фильтр              <i
-                  class="btn-default__ico btn-default__ico--down">
-                <svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                           xlink:href="#svg-icon__arrow-down"></use></svg>
-              </i>
-            </span>
-        <span class="hidden" data-filter-toggle--btn-text="">Спрятать фильтр              <i
-              class="btn-default__ico btn-default__ico--top">
-                <svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                           xlink:href="#svg-icon__arrow-top"></use></svg>
-              </i>
-            </span>
-      </button>
-    </div>
-
   </div>
   <!-- END right -->
 

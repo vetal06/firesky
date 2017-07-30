@@ -1,6 +1,3 @@
-<?php
-$this->title = "test";
-?>
 <div class="content">
     <div class="content__container">
         <div class="row">

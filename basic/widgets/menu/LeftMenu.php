@@ -18,7 +18,6 @@ class LeftMenu extends \yii\base\Widget
    */
   public function run()
   {
-    \Yii::$app->cache->flush();
     if ($this->view == null) {
       throw new Exception('Set view name');
     }

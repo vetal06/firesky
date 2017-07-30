@@ -16,6 +16,10 @@ if (isset($context->ceo['meta_description'])) {
 if (isset($context->ceo['title'])) {
     $this->title = $context->ceo['title'];
 }
+$this->registerMetaTag([
+        'name' => 'robots',
+        'content' => 'noindex, nofollow',
+]);
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -225,7 +229,7 @@ AppAsset::register($this);
       </div>
     </header>
 
-<!--      --><?php //\yii\widgets\Pjax::begin();?>
+      <?php \yii\widgets\Pjax::begin();?>
     <div class="page__content">
       <div class="row">
 
@@ -243,7 +247,7 @@ AppAsset::register($this);
         </div>
       </div>
     </div>
-<!--      --><?php //\yii\widgets\Pjax::end()?>
+      <?php \yii\widgets\Pjax::end()?>
   </div>
 
 
@@ -320,12 +324,12 @@ AppAsset::register($this);
               <div class="soc-groups">
 
 
-                <a class="soc-groups__ico soc-groups__ico--vkontakte" href="#" target="_blank">
+                <a class="soc-groups__ico soc-groups__ico--vkontakte"  href="https://vk.com/club151101528" target="_blank">
                   <svg class="svg-icon">
                     <use xlink:href="#svg-icon__vkontakte"></use>
                   </svg>
                 </a>
-                <a class="soc-groups__ico soc-groups__ico--facebook" href="#" target="_blank">
+                <a class="soc-groups__ico soc-groups__ico--facebook" href="https://www.facebook.com/groups/158255888074901/" target="_blank">
                   <svg class="svg-icon">
                     <use xlink:href="#svg-icon__facebook"></use>
                   </svg>
