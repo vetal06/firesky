@@ -15,10 +15,6 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'route_name') ?>
-
-    <?= $form->field($model, 'route_parameters') ?>
-
     <?= $form->field($model, 'name') ?>
 
     <?= $form->field($model, 'ceo_text') ?>

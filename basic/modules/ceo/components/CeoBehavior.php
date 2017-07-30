@@ -33,10 +33,7 @@ class CeoBehavior extends Behavior
 
     public function setDefaultCeo()
     {
-        $routeName = \Yii::$app->controller->route;
-        $routeParams = \Yii::$app->request->getQueryParams();
-        $query = Ceo::findByRoute($routeName, $routeParams);
-        $data = $query->asArray()->one();
+        $data = Ceo::findByRoute();
         if ($data != null) {
             $this->setCeo($data);
         }

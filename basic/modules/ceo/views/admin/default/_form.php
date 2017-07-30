@@ -14,9 +14,6 @@ use yii\widgets\ActiveForm;
 
     <?=$form->field($model, 'url')->textInput()?>
 
-    <?= $form->field($model, 'route_name')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'route_parameters')->textInput() ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 

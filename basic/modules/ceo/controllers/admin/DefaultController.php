@@ -6,8 +6,7 @@ use app\modules\ceo\components\UrlParser;
 use Yii;
 use app\modules\ceo\models\Ceo;
 use app\modules\ceo\models\CeoSearch;
-use yii\base\Exception;
-use yii\helpers\Json;
+
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -49,14 +48,13 @@ class DefaultController extends Controller
 
     /**
      * Displays a single Ceo model.
-     * @param string $route_name
-     * @param string $route_parameters
+     * @param string $url
      * @return mixed
      */
-    public function actionView($route_name, $route_parameters)
+    public function actionView($url)
     {
         return $this->render('view', [
-            'model' => $this->findModel($route_name, $route_parameters),
+            'model' => $this->findModel($url),
         ]);
     }
 
@@ -69,16 +67,13 @@ class DefaultController extends Controller
     {
         $model = new Ceo();
         if ($model->load(Yii::$app->request->post()) && !empty($model->url)) {
-            if (empty($model->route_name)) {
-                $urlParseData = (new UrlParser($model->url))->parse();
-                $model->route_name = $urlParseData['name'];
-                $model->route_parameters =  empty($urlParseData['params'])?'{}':Json::encode($urlParseData['params']);
-            }
-            if ($ceoDataList = Ceo::findByRoute($model->route_name, $model->route_parameters)->all()) {
-                return $this->render('create_step_1', compact('model', 'ceoDataList'));
+
+            $ceoData = Ceo::findByRoute($model->url);
+            if ($ceoData) {
+                return $this->render('create_step_1', compact('model', 'ceoData'));
             }
             if($model->save()) {
-                return $this->redirect(['view', 'route_name' => $model->route_name, 'route_parameters' => $model->route_parameters]);
+                return $this->redirect(['view', 'url' => $model->url]);
             }
 
             return $this->render('create', [
@@ -91,16 +86,15 @@ class DefaultController extends Controller
     /**
      * Updates an existing Ceo model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param string $route_name
-     * @param string $route_parameters
+     * @param string $url
      * @return mixed
      */
-    public function actionUpdate($route_name, $route_parameters)
+    public function actionUpdate($url)
     {
-        $model = $this->findModel($route_name, $route_parameters);
+        $model = $this->findModel($url);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'route_name' => $model->route_name, 'route_parameters' => $model->route_parameters]);
+            return $this->redirect(['view', 'url' => $model->url]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -111,13 +105,12 @@ class DefaultController extends Controller
     /**
      * Deletes an existing Ceo model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param string $route_name
-     * @param string $route_parameters
+     * @param string $url
      * @return mixed
      */
-    public function actionDelete($route_name, $route_parameters)
+    public function actionDelete($url, $route_parameters)
     {
-        $this->findModel($route_name, $route_parameters)->delete();
+        $this->findModel($url)->delete();
 
         return $this->redirect(['index']);
     }
@@ -125,14 +118,13 @@ class DefaultController extends Controller
     /**
      * Finds the Ceo model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param string $route_name
-     * @param string $route_parameters
+     * @param string $url
      * @return Ceo the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($route_name, $route_parameters)
+    protected function findModel($url)
     {
-        if (($model = Ceo::findOne(['route_name' => $route_name, 'route_parameters' => $route_parameters])) !== null) {
+        if (($model = Ceo::findOne(['url' => $url])) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

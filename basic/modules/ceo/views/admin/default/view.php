@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'route_name' => $model->route_name, 'route_parameters' => $model->route_parameters], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'route_name' => $model->route_name, 'route_parameters' => $model->route_parameters], [
+        <?= Html::a('Update', ['update', 'url' => $model->url], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'url' => $model->url], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -28,8 +28,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'route_name',
-            'route_parameters',
             'name',
             'ceo_text:ntext',
             'title',

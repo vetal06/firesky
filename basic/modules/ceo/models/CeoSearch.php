@@ -18,7 +18,7 @@ class CeoSearch extends Ceo
     public function rules()
     {
         return [
-            [['route_name', 'route_parameters', 'name', 'ceo_text', 'title', 'meta_keywords', 'meta_description'], 'safe'],
+            [[ 'name', 'ceo_text', 'title', 'meta_keywords', 'meta_description'], 'safe'],
         ];
     }
 
@@ -57,9 +57,7 @@ class CeoSearch extends Ceo
         }
 
         // grid filtering conditions
-        $query->andFilterWhere(['like', 'route_name', $this->route_name])
-            ->andFilterWhere(['like', 'route_parameters', $this->route_parameters])
-            ->andFilterWhere(['like', 'name', $this->name])
+        $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'ceo_text', $this->ceo_text])
             ->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'meta_keywords', $this->meta_keywords])

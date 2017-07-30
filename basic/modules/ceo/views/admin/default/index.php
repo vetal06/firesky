@@ -31,15 +31,20 @@ $this->params['breadcrumbs'][] = $this->title;
                     return Html::a($model->url, $model->url);
                 }
             ],
-            'route_name',
-            'route_parameters',
             'name',
             'ceo_text:ntext',
             'title',
             // 'meta_keywords',
             // 'meta_description',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'urlCreator' => function( $action,  $model,  $key,  $index, $th) {
+                    $params = ['url' => (string) $key];
+                    $params[0] = $th->controller ? $th->controller . '/' . $action : $action;
+                    return \yii\helpers\Url::toRoute($params);
+                }
+            ],
         ],
     ]); ?>
 </div>

@@ -56,11 +56,7 @@ class CeoWidget extends \yii\base\Widget
     private function findModel()
     {
         if (self::$ceoModel == null) {
-            $routeName = \Yii::$app->controller->route;
-            $routeParams = \Yii::$app->controller->actionParams;
-            $routeParams['lang'] = \Yii::$app->language;
-            $query = Ceo::findByRoute($routeName, $routeParams);
-            self::$ceoModel = $query->one();
+            self::$ceoModel = Ceo::findByRoute();
         }
         return self::$ceoModel;
     }

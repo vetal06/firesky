@@ -3,10 +3,8 @@
     <?=$form->field($model, 'url')->textInput()?>
     <?=\yii\bootstrap\Html::submitButton('Далее')?>
 <?php \yii\bootstrap\ActiveForm::end()?>
-<?php if(!empty($ceoDataList)):?>
+<?php if(!empty($ceoData)):?>
     <h2>Данные уже созданы</h2>
-    <?php foreach ($ceoDataList as $ceo):?>
-        <p><?=\yii\helpers\Html::a($ceo->name,['admin/default/update', 'route_name' => $ceo->route_name, 'route_parameters' => $ceo->route_parameters])?></p>
-    <?php endforeach;?>
+    <p><?=\yii\helpers\Html::a($ceoData['name'],['admin/default/update', 'url' => $ceoData['url']])?></p>
 <?php endif;?>
 
