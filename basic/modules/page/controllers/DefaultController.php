@@ -11,6 +11,12 @@ use yii\web\NotFoundHttpException;
  */
 class DefaultController extends Controller
 {
+
+    public function behaviors()
+    {
+        return $this->module->controllerBehaviors;
+    }
+
     /**
      * Экшн страницы на сайте
      * @param $alias

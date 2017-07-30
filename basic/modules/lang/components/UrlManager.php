@@ -2,8 +2,6 @@
 namespace app\modules\lang\components;
 
 
-use yii\helpers\Url;
-
 class UrlManager extends \yii\web\UrlManager
 {
 
@@ -43,7 +41,7 @@ class UrlManager extends \yii\web\UrlManager
     public function parseRequest($request)
     {
         $res = parent::parseRequest($request);
-        if (empty($res[1]['lang'])) {
+        if (is_array($res) && empty($res[1]['lang'])) {
             $res[1]['lang'] = $request->currentLang;
         }
         return $res;

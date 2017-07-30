@@ -3,6 +3,8 @@
 namespace app\controllers;
 
 use app\models\Product;
+use app\modules\ceo\components\CeoBehavior;
+use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 
@@ -11,6 +13,15 @@ use yii\web\NotFoundHttpException;
  */
 class ProductController extends Controller
 {
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => CeoBehavior::className(),
+            ]
+        ];
+    }
 
     /**
      * Главный экшн карточки объекта

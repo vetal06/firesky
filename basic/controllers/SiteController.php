@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\modules\ceo\components\CeoBehavior;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -34,6 +35,9 @@ class SiteController extends Controller
                     'logout' => ['post'],
                 ],
             ],
+            [
+                'class' => CeoBehavior::className(),
+            ]
         ];
     }
 

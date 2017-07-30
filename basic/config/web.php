@@ -57,13 +57,19 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'suffix' => '/',
-            'rules' => [
+            'rules' => [ // не забывать что порядок рулсов играет очень большую роль
+                'cat-<catalias1:\w+>/<catalias2:\w+>/<catalias:\w+>/prod-<alias:\w+>-<id:\d+>' => 'product/index',
+                'cat-<catalias1:\w+>/<catalias:\w+>/prod-<alias:\w+>-<id:\d+>' => 'product/index',
+                'cat-<catalias:\w+>/prod-<alias:\w+>-<id:\d+>' => 'product/index',
+
+                'cat-<alias1:\w+>/<alias2:\w+>/<alias:\w+>' => 'category/index',
+                'cat-<alias1:\w+>/<alias:\w+>' => 'category/index',
+                'cat-<alias:\w+>' => 'category/index',
+
+                'page-<alias:\w+>-<id:\d+>' => 'page/default/index',
                 '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-                'cat-<catalias:.+>/prod-<alias:\w+>-<id:\d+>' => 'product/index',
-                'cat-<alias:.+>' => 'category/index',
-                'page-<alias:\w+>-<id:\d+>' => 'page/default/index',
             ],
         ],
         'view' => [
@@ -86,6 +92,9 @@ $config = [
             'class' => 'app\modules\page\PageModule',
             'adminLayout' => '@app/modules/admin/views/layouts/main',
             'adminRoles' => ['@'],
+            'controllerBehaviors' => [
+                [ 'class' => 'app\modules\ceo\components\CeoBehavior'],
+            ],
         ],
         'ceo' => [
             'class' => 'app\modules\ceo\CeoModule',

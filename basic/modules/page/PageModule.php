@@ -20,6 +20,8 @@ class PageModule extends \yii\base\Module
      */
     public $adminLayout;
 
+    public $controllerBehaviors = [];
+
     public $adminRoles = ['@'];
 
     private $isAdminAction = false;

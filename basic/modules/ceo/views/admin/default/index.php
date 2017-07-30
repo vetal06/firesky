@@ -24,6 +24,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
+            [
+                'attribute' => 'url',
+                'format' => 'raw',
+                'value' => function ($model) {
+                    return Html::a($model->url, $model->url);
+                }
+            ],
             'route_name',
             'route_parameters',
             'name',

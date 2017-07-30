@@ -6,6 +6,16 @@
 use yii\helpers\Html;
 use app\assets\AppAsset;
 
+$context = $this->context;
+if (isset($context->ceo['meta_keywords'])) {
+    $this->registerMetaTag(['name' => 'keywords', 'content' => $context->ceo['meta_keywords']]);
+}
+if (isset($context->ceo['meta_description'])) {
+    $this->registerMetaTag(['name' => 'description', 'content' => $context->ceo['meta_description']]);
+}
+if (isset($context->ceo['title'])) {
+    $this->title = $context->ceo['title'];
+}
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -15,9 +25,7 @@ AppAsset::register($this);
   <meta charset="<?= Yii::$app->charset ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?= Html::csrfMetaTags() ?>
-    <?=\app\modules\ceo\widgets\CeoWidget::widget([
-        'type' => \app\modules\ceo\widgets\CeoWidget::TYPE_META,
-    ])?>
+    <title><?=Html::encode($this->title)?></title>
   <?php $this->head() ?>
 </head>
 <body>
@@ -245,9 +253,7 @@ AppAsset::register($this);
   <div class="page__container">
     <div class="page__seo-text">
       <div class="typo typo--seo">
-          <?=\app\modules\ceo\widgets\CeoWidget::widget([
-                  'type' => \app\modules\ceo\widgets\CeoWidget::TYPE_TEXT,
-          ])?>
+          <?=(isset($context->ceo['ceo_text'])?$context->ceo['ceo_text']:'')?>
       </div>
     </div>
   </div>
