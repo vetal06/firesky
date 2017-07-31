@@ -51,47 +51,7 @@
                         xlink:href="#svg-icon__arrow-right"></use></svg></i></span>
             </button>
           </li>
-          <li class="mobile-nav__item" data-mobile-nav-item>
-            <a class="mobile-nav__link mobile-nav__link--view-all"
-               href="http://unishopvertical.imagecmsdemo.net">
-              Смотреть все </a>
-          </li>
-          <li class="mobile-nav__item" data-mobile-nav-item>
-            <a class="mobile-nav__link" href="#"
-               data-mobile-nav-link target="_self">
-              Новости <span class="mobile-nav__has-children"><i class="mobile-nav__ico"><svg
-                      class="svg-icon"><use
-                        xlink:href="#svg-icon__arrow-right"></use></svg></i></span> </a>
-            <ul class="mobile-nav__list mobile-nav__list--drop hidden" data-mobile-nav-list>
-              <li class="mobile-nav__item" data-mobile-nav-item>
-                <button class="mobile-nav__link mobile-nav__link--go-back" data-mobile-nav-go-back>
-                  Назад <span class="mobile-nav__has-children"><i class="mobile-nav__ico"><svg
-                          class="svg-icon"><use
-                            xlink:href="#svg-icon__arrow-right"></use></svg></i></span>
-                </button>
-              </li>
-              <li class="mobile-nav__item" data-mobile-nav-item>
-                <a class="mobile-nav__link mobile-nav__link--view-all"
-                   href="http://unishopvertical.imagecmsdemo.net/blog">
-                  Смотреть все </a>
-              </li>
-              <li class="mobile-nav__item" data-mobile-nav-item>
-                <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/blog/biznes"
-                   target="_self">
-                  Бизнес </a>
-              </li>
-              <li class="mobile-nav__item" data-mobile-nav-item>
-                <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/blog/finansy"
-                   target="_self">
-                  Финансы </a>
-              </li>
-              <li class="mobile-nav__item" data-mobile-nav-item>
-                <a class="mobile-nav__link"
-                   href="http://unishopvertical.imagecmsdemo.net/blog/ekonomika" target="_self">
-                  Экономика </a>
-              </li>
-            </ul>
-          </li>
+
           <li class="mobile-nav__item" data-mobile-nav-item>
             <a class="mobile-nav__link" href="/page-shippingandpayment-3"
                target="_self">
@@ -103,10 +63,6 @@
               Клиенты о нас </a>
           </li>
         </ul>
-      </li>
-      <li class="mobile-nav__item" data-mobile-nav-item>
-        <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/gallery" target="_self">
-          Галерея </a>
       </li>
       <li class="mobile-nav__item" data-mobile-nav-item>
         <a class="mobile-nav__link" href="/page-shippingandpayment-3" target="_self">Доставка
@@ -122,10 +78,6 @@
       </li>
       <li class="mobile-nav__item" data-mobile-nav-item>
         <?= empty(Yii::$app->user->id) ? \yii\helpers\Html::a('Регистрация', '/user/register', ['class' => 'mobile-nav__link', 'rel' => "nofollow"]) : '' ?>
-      </li>
-
-      <li class="mobile-nav__item">
-        <a class="mobile-nav__link" href="http://unishopvertical.imagecmsdemo.net/shop/cart">Корзина</a>
       </li>
 
 
