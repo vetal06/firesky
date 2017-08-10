@@ -9,8 +9,9 @@
         <div class="product-photo">
           <button class="product-photo__item" type="button"
                   data-product-photo-href="<?=$model->getUrl()?>">
-            <img class="product-photo__img"
-                 src="<?=$model->getMainImageUrl()?>"
+            <img class="product-photo__img lazy"
+                 src="<?=Yii::$app->params['emptyImage']?>"
+                 data-original="<?=$model->getMainImageUrl()?>"
                  alt="<?=$model->name?>"
                  title="<?=$model->name?>" data-product-photo="">
             <!-- Photo labels -->

@@ -1,7 +1,6 @@
-<?php
-$this->title = 'firesky.com.ua';
-?>
 <div class="page__main-banner">
+    <h1 class="content__title
+"><?=Yii::t('app', $this->context->ceo['h1'])?></h1>
     <div class="banner-group">
         <div class="row row--gutter-collapse">
 
@@ -43,8 +42,9 @@ $this->title = 'firesky.com.ua';
                                     <!-- Banner URL -->
 
                                     <!-- Banner image -->
-                                    <img class="banner-simple__image"
-                                         src="/uploads/images/salut_posle_svadebnogo_banketa1.jpg"
+                                    <img class="banner-simple__image lazy"
+                                         src="<?=Yii::$app->params['emptyImage']?>"
+                                         data-original="/uploads/images/salut_posle_svadebnogo_banketa1.jpg"
                                          alt="Салют на свадьбу">
 
                                 </div>
@@ -58,8 +58,9 @@ $this->title = 'firesky.com.ua';
                                     <!-- Banner URL -->
 
                                     <!-- Banner image -->
-                                    <img class="banner-simple__image"
-                                         src="/uploads/images/salut_posle_svadebnogo_banketa1.jpg"
+                                    <img class="banner-simple__image lazy"
+                                         src="<?=Yii::$app->params['emptyImage']?>"
+                                         data-original="/uploads/images/salut_posle_svadebnogo_banketa1.jpg"
                                          alt="Салют на свадьбу">
 
                                 </div>
@@ -109,7 +110,7 @@ $this->title = 'firesky.com.ua';
                                         <!-- Banner URL -->
 
                                         <!-- Banner image -->
-                                        <img class="banner-simple__image"
+                                        <img class="banner-simple__image "
                                              src="/uploads/images/Dubai.jpg"
                                              alt="Новогодний салют">
 

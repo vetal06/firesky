@@ -14,8 +14,9 @@
                                    target="_blank" data-product-photo-link="" data-magnific-galley-main=""
                                    data-magnific-galley-title="<?= $model->name ?>"
                                    data-magnific-galley-close-text="Закрыть">
-                                    <img class="product-photo__img"
-                                         src="<?= $model->getMainImageUrl() ?>"
+                                    <img class="product-photo__img lazy"
+                                         src="<?=Yii::$app->params['emptyImage']?>"
+                                         data-original="<?= $model->getMainImageUrl() ?>"
                                          alt="<?=$model->name?>"
                                          title="<?=$model->name?>"
                                         >

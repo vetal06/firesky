@@ -22,4 +22,5 @@ return [
         ],
 
     ],
+    'emptyImage' => '/uploads/images/1px.png',
 ];

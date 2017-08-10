@@ -30,5 +30,12 @@ class AppAsset extends AssetBundle
         'yii\web\JqueryAsset',
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
+        'app\modules\callback\widgets\source\CallButtonAssets',
+        'app\modules\cart\widgets\AddButtonAssets',
+        'app\modules\cart\widgets\CartHeaderAssets',
+        'app\modules\cart\widgets\OrderListAssets',
+        'yii\widgets\ActiveFormAsset',
+        'yii\widgets\PjaxAsset',
+        'app\widgets\lazyload\LazyLoadAsset',
     ];
 }

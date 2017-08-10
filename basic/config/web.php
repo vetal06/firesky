@@ -133,6 +133,10 @@ if (YII_ENV_DEV) {
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
+} else {
+    $config['components']['assetManager'] = [
+        'bundles' =>require(__DIR__.'/../assets/MinAsset.php'),
+    ];
 }
 
 return $config;
