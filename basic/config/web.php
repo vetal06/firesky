@@ -7,6 +7,7 @@ $config = [
     'basePath' => dirname(__DIR__),
     'language' => 'ru',
     'bootstrap' => ['log'],
+    'defaultRoute' => 'site/index',
     'components' => [
         'i18n' => [
             'translations' => [
@@ -100,6 +101,7 @@ $config = [
             'class' => 'app\modules\ceo\CeoModule',
             'adminLayout' => '@app/modules/admin/views/layouts/main',
             'adminRoles' => ['@'],
+            'urlParams' => ['lang', 'id', 'catalias1', 'catalias2', 'catalias', 'alias', 'alias1', 'controller', 'action'],
         ],
         'treemanager' =>  [
             'class' => '\kartik\tree\Module',

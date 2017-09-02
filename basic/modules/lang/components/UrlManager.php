@@ -16,6 +16,9 @@ class UrlManager extends \yii\web\UrlManager
             $this->lang = \Yii::$app->language;
         }
 
+        if (isset($params[0]) && $params[0] == \Yii::$app->defaultRoute) {
+            $params[0] = '/';
+        }
         $langUrl = $this->lang;
         if ($langUrl == \Yii::$app->params['languages']['default']) {
             $langUrl = null;

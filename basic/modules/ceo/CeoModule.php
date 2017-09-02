@@ -22,6 +22,12 @@ class CeoModule extends \yii\base\Module
 
     public $adminRoles = ['@'];
 
+    /**
+     * Список параметров которіе учитывать в формировании url
+     * @var
+     */
+    public $urlParams = [];
+
     public function beforeAction($action)
     {
         if(preg_match('/admin/', $action->controller->id)) {

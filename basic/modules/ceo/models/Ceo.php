@@ -61,7 +61,15 @@ class Ceo extends \yii\db\ActiveRecord
     {
 
         if ($url == null) {
-            $url = Yii::$app->request->url;
+            $currentParams = Yii::$app->getRequest()->getQueryParams();
+            $urlParams = Yii::$app->getModule('ceo')->urlParams;
+            foreach ($currentParams as $param => $value) {
+                if (!in_array($param, $urlParams)) {
+                    unset($currentParams[$param]);
+                }
+            }
+            $currentParams[0] = '/' . Yii::$app->controller->getRoute();
+            $url = Url::toRoute($currentParams);
         }
 
         $query = Ceo::find()->where(['url' => $url]);

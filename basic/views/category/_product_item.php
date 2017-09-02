@@ -12,8 +12,8 @@
             <img class="product-photo__img lazy"
                  src="<?=Yii::$app->params['emptyImage']?>"
                  data-original="<?=$model->getMainImageUrl()?>"
-                 alt="<?=$model->name?>"
-                 title="<?=$model->name?>" data-product-photo="">
+                 alt="<?=\yii\helpers\Html::encode($model->name)?>"
+                 title="<?=\yii\helpers\Html::encode($model->name)?>" data-product-photo="">
             <!-- Photo labels -->
             <?=$this->render('_photo_labels',compact('model'))?>
           </button>

@@ -21,6 +21,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'h1')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'meta_keywords')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'meta_description')->textInput(['maxlength' => true]) ?>

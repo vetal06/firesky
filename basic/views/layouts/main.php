@@ -175,7 +175,7 @@ AppAsset::register($this);
             </div>
             <!-- Logo -->
             <div id="logo-block" class="col-xs-6 col-md-3 col-lg-2 col--align-center col--align-left-md">
-              <a href="/"><img src="/uploads/images/logo.png" alt="firesky.com.ua"></a>
+              <a href="<?=\yii\helpers\Url::to(['/'])?>"><img src="/uploads/images/logo.png" alt="firesky.com.ua"></a>
             </div>
             <!-- Phones and call-back -->
             <div class="col-md-3 col-lg-2 col-md-push-5 col-lg-push-4 hidden-xs hidden-sm">
@@ -229,7 +229,6 @@ AppAsset::register($this);
       </div>
     </header>
 
-      <?php \yii\widgets\Pjax::begin();?>
     <div class="page__content">
       <div class="row">
 
@@ -247,7 +246,6 @@ AppAsset::register($this);
         </div>
       </div>
     </div>
-      <?php \yii\widgets\Pjax::end()?>
   </div>
 
 
